@@ -15,7 +15,7 @@ const breakpointColumnsObj = {
   700: 1,
 }; // Define responsive breakpoints for Masonry layout
 
-const WorksCard = ({ index, name, description, tags, image }) => {
+const WorksCard = ({ index, name, sub, short, cover, description, tags, image }) => {
   return (
     <Link to={`/projects/${name}`} className="group">
     <Tilt
@@ -28,23 +28,24 @@ const WorksCard = ({ index, name, description, tags, image }) => {
     >
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full  p-[1px] rounded-[20px] shadow-card"
+        className="w-full  p-[1px] "
       >
-        <div className="bg-tertiary rounded-[20px] py-5 px-5 min-h-[280px] flex justify-evenly items-center flex-col">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-[200px] object-cover rounded-[20px]"
-          />
-          <h3 className="text-white text-[20px] py-5 font-bold text-center">{name}</h3>
-          <p className="text-secondary text-[16px] text-start">{description}</p>
-          <div className='mt-4 flex flex-wrap gap-2'>
+         <div className='mt-4 flex flex-wrap gap-2'>
             {tags.map((tag) => (
-              <p key={`${name}-${tag.name}`} className={`text-[14px] `}>
-                #{tag.name}
+              <p key={`${name}-${tag.name}`} className={`text-[14px] text-secondary `}>
+                [{tag.name}]
               </p>
             ))}
           </div>
+        <div className=" rounded-[20px] py-4 px-0 min-h-[280px] flex justify-evenly items-center flex-col">
+          <img
+            src={cover}
+            alt={name}
+            className="w-full h-[300px] object-cover "
+          />
+          <h3 className="text-secondary text-[20px]  py-5 font-bold text-left uppercase">{name}: {sub}</h3>
+          <p className="text-secondary text-[16px] text-start">{short}</p>
+         
         </div>
       </motion.div>
     </Tilt>
@@ -55,27 +56,28 @@ const Works =() => {
     return(
         <>
              <motion.div variants={textVariant()}>
-               <p className={`${styles.sectionSubText} text-center`}>
+               <p className={`${styles.sectionSubText} text-left text-secondary`}>
                  My Work
                </p>
-               <h2 className={`${styles.sectionHeadText} text-center`}>
-                Projects
+               <h2 className={`${styles.sectionHeadText} text-left text-secondary`}>
+                Latest Projects
                </h2>
              </motion.div>
-             
-             <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="my-masonry-grid"
-                columnClassName="my-masonry-grid_column"
-                >
-                {projects.map((project, index) => (
-                  <WorksCard key={`project-${index}`} index={index} {...project} />
-                ))}
-                </Masonry> 
+         
+            <motion.p variants={fadeIn("up", "spring", 0.1, 1)} 
+            className="mt-4 text-secondary text-[17px] max-w-6xl  leading-[30px] text-left">
+            Here are some of my projects that showcase my skills in UI/UX design, front-end
+            development, and illustration. Each project reflects my passion for creating engaging and user-friendly digital experiences.
+            </motion.p>
+            <div className="mt-20 flex flex-wrap gap-10 justify-center">
+            {projects.map((project, index) => (
+              <WorksCard key={project.name} index={index} {...project} />
+            ))}
+          </div>
       
         </>
     );
 
     
 }
-export default SectionWrapper(Works, "works");
+export default SectionWrapper(Works, "work");

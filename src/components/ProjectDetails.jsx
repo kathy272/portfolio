@@ -1,5 +1,5 @@
 // this page is used to display a single project
-import React, { useState, useEffect } from 'react';import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react'; import { motion } from 'framer-motion';
 import { styles } from '../styles';
 
 import { useParams } from 'react-router-dom';
@@ -8,96 +8,139 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from "../hoc";
 import Masonry from "react-masonry-css";
+import arrow from '../assets/arrow.svg';
+import { Link } from "react-router-dom";
 
 const breakpointColumnsObj = {
-  default: 3,
-  1100: 2,
-  700: 1,
-}; 
+    default: 3,
+    1100: 2,
+    700: 1,
+};
 
 
 const ProjectDetails = () => {
-  const { name} = useParams();
-  const [project, setProject] = useState(null);
-  //create overlay of images when clicking on a pic
-  const [selectedImage, setSelectedImage] = useState(null);
+    const { name } = useParams();
+    const [project, setProject] = useState(null);
+    //create overlay of images when clicking on a pic
+    const [selectedImage, setSelectedImage] = useState(null);
 
-  useEffect(() => {
-    const foundProject = projects.find((project) => project.name === name);
-    setProject(foundProject);
-  }, [name]);
+    useEffect(() => {
+        const foundProject = projects.find((project) => project.name === name);
+        setProject(foundProject);
+    }, [name]);
 
-  if (!project) return <div>Loading...</div>;
+    if (!project) return <div>Loading...</div>;
 
-  return (
-     <div className={`${styles.paddingX} absolute inset-0 top-[120px] mx-auto flex-row max-w-7xl items-start gap-5`}>
-         <div className="flex flex-col justify-center items-center mt-5"></div>
+    return (
+        <div className={`  inset-0 top-[120px] mx-auto flex-row  items-start gap-5 `}>
+            <div className="flex flex-col justify-center items-center my-12 w-full "></div>
 
-    
-     <div></div>
-          <motion.div variants={{textVariant: textVariant(0.1)}}>
-             <p className={`${styles.sectionSubText}`}>
-           <a href="/" className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer">Back to Projects</a>
-        </p>
-              <h2 className={styles.sectionHeadText}>
-                {project.name}
-              </h2>
-               <div className='mt-4 flex flex-wrap gap-2'>
-            {project.tags.map((tag) => (
-              <p key={`${name}-${tag.name}`} className={`text-[14px] `}>
-                {tag.name} | 
-              </p>
-            ))}
-          </div>
-          </motion.div>
-  
-          <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            {project.description}
-          </motion.p>
-          <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            {project.description2}
-          </motion.p>
-          <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            {project.description3}
-          </motion.p>
-          <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            {project.description4}
-          </motion.p>
-             <Masonry
-                          breakpointCols={breakpointColumnsObj}
-                          className="my-masonry-grid"
-                          columnClassName="my-masonry-grid_column"
-                          >
-                         {project.images?.map((img, idx) => (
 
-  <img
-    key={idx}
-    src={img}
-    alt={`tideup-img-${idx}`}
-    className="w-full rounded-xl my-4"
-    onClick={() => setSelectedImage(img)}
-  />
-))}
-</Masonry> 
+
+            <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full py-10">
+                <div>
+                    <Link to="/"
+                        className="flex items-center gap-2"
+                        onClick={() => {
+                            setActive("");
+                            window.scrollTo(0, 0);
+                        }}>
+
+                        <img src={arrow} alt="arrow back" className="w-12 h-10 object-contain" />
+
+                    </Link>
+                    <motion.div variants={{ textVariant: textVariant(0.1) }}>
+
+                        <h2 className="text-secondary font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] uppercase">
+                            {project.name}
+                        </h2>
+
+                    </motion.div>
+
+                    <motion.p
+                        variants={{ textVariant: textVariant(0.1) }}
+                        className="mt-4 text-secondary text-[17px] max-w-6xl leading-[30px] text-left"
+                    >
+                        {project.description.map((line, index) => (
+                            <span key={index}>
+                                {line}
+                                <br />
+                            </span>
+                        ))}
+                    </motion.p>
+
+                    <div className='mt-4 flex flex-col item-center gap-2'>
+                        <div className="flex flex-row gap-2">
+                            <h1 className="text-secondary text-[20px] font-bold text-left uppercase">Technologies:</h1>
+                            {project.tags.map((tag) => (
+                                <h1 key={`${name}-${tag.name}`} className={`text-[20px] text-secondary uppercase `}>
+                                    {tag.name} |
+                                </h1>
+                            ))}
+                        </div>
+                        <div className="flex flex-row gap-2">
+                            <h1 className="text-secondary text-[20px] font-bold text-left uppercase">Year:</h1>
+                            <h1 className={`text-[20px] text-secondary uppercase `}>
+                                {project.year}
+                            </h1>
+                        </div>
+                        <div className="flex flex-row gap-2">
+                            <h1 className="text-secondary text-[20px] font-bold text-left uppercase">Field:</h1>
+                            <h1 className={`text-[20px] text-secondary uppercase `}>
+                                {project.field}
+                            </h1>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div className="mt-10 md:mt-20 min-w-80px max-w-200px w-1/2 ">
+                    <img src={project.image}  alt={project.name} className="w-full object-cover " />
+                </div>
+
+            </div>
+
+
+
+
+
+            <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+
+
+            >
+                {project.images?.map((img, idx) => (
+
+                    <img
+                        key={idx}
+                        src={img}
+                        alt={`${project.id}-img-${idx}`}
+                        className="w-full my-2  cursor-pointer object-contain  md:max-h-[450px]"
+                        onClick={() => setSelectedImage(img)}
+                    />
+                ))}
+            </Masonry>
             {selectedImage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-                <img
-                    src={selectedImage}
-                    alt="Selected"
-                    className="max-w-full max-h-full"
-                    onClick={() => setSelectedImage(null)}
-                />
+                    <img
+                        src={selectedImage}
+                        alt="Selected"
+                        className="max-w-full max-h-full"
+                        onClick={() => setSelectedImage(null)}
+                    />
                 </div>
             )}
-            
-         
 
-</div>
-)
+
+
+        </div>
+    )
 
 }
-export default ProjectDetails;
+//export default ProjectDetails;
+export default SectionWrapper(ProjectDetails, "projectdetails");

@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 //import {ContactModel} from "./canvas";
 import { slideIn } from "../utils/motion";  
+import BubbleCanvas from "./canvas/BubbleCanvas";
+
 
 const Contact =() => {
     const [form, setForm] = useState({
@@ -62,15 +64,16 @@ const Contact =() => {
       
     }
     return(
-        <div
-        className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+        <div         id="contact"
+
+        className="xl:mt-12 pt-[150px] flex xl:flex-row flex-col-reverse gap-10 overflow-hidden bg-contact">
 
         <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
-            className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+            className="flex-[0.75]  sm:px-16 px-6 sm:py-20 py-15"
         >
-            <p className={styles.sectionSubText}>Get in touch!</p>
-            <h3 className={styles.sectionHeadText}>Contact</h3>
+            <p className="sm:text-[18px] text-[14px] text-teritary uppercase tracking-wider pt-[120px]">Get in touch!</p>
+            <h3 className= "text-teritary font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact Me</h3>
          
                 <form 
                 ref={formRef} 
@@ -85,7 +88,7 @@ const Contact =() => {
                             value={form.name}
                             onChange={handleChange}
                             placeholder="What's your name?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                            className="bg-teritary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
                         />
                     </label>
                     <label className="flex flex-col">
@@ -96,7 +99,7 @@ const Contact =() => {
                             value={form.email}
                             onChange={handleChange}
                             placeholder="What's your email?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                            className="bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
                         />
                     </label>
                     <label className="flex flex-col">
@@ -107,7 +110,7 @@ const Contact =() => {
                             value={form.message}
                             onChange={handleChange}
                             placeholder="What do you want to say?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                            className="bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
                         />
                     </label>
 
@@ -124,8 +127,10 @@ const Contact =() => {
         <motion.div
             variants={slideIn("right", "tween", 0.2, 1
             )}
-            className="xl:flex-1 xl:h-auto md:h-[550px] h-[500px]">
+            className="xl:flex-1 xl:h-auto md:h-[550px] h-[500px] pt-[150px]">
             {/* <ContactModel /> */}    
+            <BubbleCanvas />
+
         </motion.div>
 
               </div>
@@ -136,4 +141,4 @@ const Contact =() => {
     
 
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

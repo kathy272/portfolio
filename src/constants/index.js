@@ -1,4 +1,7 @@
-import { desc } from "framer-motion/client";
+//import { desc } from "framer-motion/client";
+//import { sub } from "maath/dist/declarations/src/vector2";
+
+import { cover } from "three/src/extras/TextureUtils.js";
 
 
 export const navLinks = [
@@ -19,29 +22,45 @@ export const navLinks = [
 const areas = [
 
   {
-    title: "Front-end Developer",
+    title: "Front-end Dev",
+    nr: "01",
     //icon: web,
   },
   {
-    title: "Mobile Developer",
+    title: "UI/UX Design",
+    nr: "02",
     //icon: mobile,
   },
   {
-    title: "UI/UX Designer",
+    title: "Creative Coding",
+    nr: "03",
     //icon: backend,
   },
   {
-    title: "3D Artist",
+    title: "Illustration",
+    nr: "04",
     //icon: creator,
   },
   {
-    title: "Illustrator",
+    title: "3D Modelling",
+    nr: "05",
     //icon: web,
   },
   {
-    title: "Creative Coder",
+    title: "Mobile Dev",
+    nr: "06",
     //icon: mobile,
-  }
+  },
+  {
+    title: "Back-End Dev",
+    nr: "07",
+    //icon: backend,
+  },
+  {
+    title: "Game Dev",
+    nr: "08",
+    //icon: game,
+  },
 
 
 ];
@@ -84,37 +103,17 @@ const experiences = [
 
 const projects = [
   {
-    name: "AR Map Creator",
-    description:
-      "In the ACME lab in CU Boulder, I had the opportunity to create an AR storytelling application.",
-      description2: "Created an interactive storytelling experience using real-time image generation and a Canvas-to-Oculus drawing pipeline. This practical component, was part of my bachelor thesis about storytelling in Augmented Reality. ",
-      description3: "For this application, I first looked into Python to automate 3D model generation, before diving into real-time creation by using an NDI and a ShaderGraph by using the color data of images to render an asset in ar based on a drawing. Furthermore, by enabling AI generated concept art directly inside the application, using an Stable Diffusion API, enhances the user experience.",
-      description4: "Participating in the Europe-Colorado Program, I was presented with a stipend and a 6 month internship in the ACME lab at the University of Colorado, Boulder under Professor Ellen Do. Furthermore, I had the chance to participate in various lectures and talks.",
-    tags: [
-      {
-        name: "Unity",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AR Foundation",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Figma",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Websocker",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "/armap.png",
-  },
-  {name: "TideUp",
-    description: "For 11 weeks in 2025 I was part of a game production group that was tasked to create a game from scratch. We created a game called TideUp, where the player has to clean up the beach from plastic waste. The game is a 3D rpg with a focus on environmental awareness.",
-    description2: "My task was to bring the game idea to life by creating concept art, modelling and texturing various assets and create charming dialogue.",
-    description3: "TideUp is a cozy 3D game about Re- and Upcycling Trash on an Island to bring change. The Player takes on the role of a traveler who gets washed onto the beach and decides to clean up the island to help the environment and the islanders!",
-    description4: "The models and textures I created included: The Player Character, three villagers, the Engineer Marley, the workshop (outside and inside) and pier, the Re-Upcycler, and various smaller environment assets to enrich the island.",
+    name: "TideUp",
+    id: "TideUp",
+    sub: "A serious game about recycling",
+    short: "Designing and modelling various 3D Models in Blender for TideUp.",
+    description: [
+      "For 11 weeks in 2025 I was part of a game production group that was tasked to create a game from scratch. We created a game called TideUp, where the player has to clean up the beach from plastic waste. The game is a 3D rpg with a focus on environmental awareness.",
+   "My task was to bring the game idea to life by creating concept art, modelling and texturing various assets and create charming dialogue.",
+     "TideUp is a cozy 3D game about Re- and Upcycling Trash on an Island to bring change. The Player takes on the role of a traveler who gets washed onto the beach and decides to clean up the island to help the environment and the islanders!",
+    "The models and textures I created included: The Player Character, three villagers, the Engineer Marley, the workshop (outside and inside) and pier, the Re-Upcycler, and various smaller environment assets to enrich the island."],
+    year: "2025",
+    field: "Game Development",
     tags: [
       {
         name: "Unity",
@@ -133,66 +132,135 @@ const projects = [
       },
 
     ],
-    image: "/tideup.png"  ,
-      images: Array.from({ length: 15 }, (_, i) => `/TideUp/tu${i + 1}.png`)
+    image: "/TideUp/img00.png"  ,
+    cover: "/TideUp/img00.png",
+      images: Array.from({ length: 13 }, (_, i) => `/TideUp/img${i + 1}.png`)
+  },
+  {
+    name: "AR Map Creator",
+    id: "ARMap",
+    sub:" Real Time Map Rendering",
+    short:"In the ACME Lab in CU Boulder, I had the opportunity to create a dynamic AR application.",
+    description:
+    [  "In the ACME lab in CU Boulder, I had the opportunity to create an AR storytelling application.",
+      "Created an interactive storytelling experience using real-time image generation and a Canvas-to-Oculus drawing pipeline. This practical component, was part of my bachelor thesis about storytelling in Augmented Reality. ",
+      "For this application, I first looked into Python to automate 3D model generation, before diving into real-time creation by using an NDI and a ShaderGraph by using the color data of images to render an asset in ar based on a drawing. Furthermore, by enabling AI generated concept art directly inside the application, using an Stable Diffusion API, enhances the user experience.",
+      "Participating in the Europe-Colorado Program, I was presented with a stipend and a 6 month internship in the ACME lab at the University of Colorado, Boulder under Professor Ellen Do. Furthermore, I had the chance to participate in various lectures and talks.",
+    ],
+    year: "2024",
+    field: "Creative Coding",
+    tags: [
+      {
+        name: "Unity",
+      },
+      {
+        name: "Figma",
+      },
+      {
+        name: "Websocker",
+      },
+    ],
+    image: "/armap.png",
+    cover: "/armap.png",
+          images: Array.from({ length: 3 }, (_, i) => `/ARMap/img${i + 1}.png`)
+
   },
   {
     name: "Real-Time Engine",
+    id: "RTE",
+    sub: "Live Visuals",
+    short: "Creating a visual live programming environment for the 69 x 4.5 m display at the House of Digitalization in Tulln.",
     description:
-      "Using the vvvv-Gamma program, a visual live programming environment based on C#, I had the opportunity to bring my project to life on the 69 x 4.5 m display at the House of Digitalization in Tulln.",
-      description2: "The live programming environment allowed me to implement my ideas in a simple and intuitive way. The program provides a variety of tools and features that enabled me to create and animate the visual elements of my project.",
-      description3: " Overall, it was an incredible experience to bring my project to life on the display at the House of Digitalization. I am grateful for the opportunity to showcase my project on this platform",
-      description4: "",
+   [   "Using the vvvv-Gamma program, a visual live programming environment based on C#, I had the opportunity to bring my project to life on the 69 x 4.5 m display at the House of Digitalization in Tulln.",
+      "The live programming environment allowed me to implement my ideas in a simple and intuitive way. The program provides a variety of tools and features that enabled me to create and animate the visual elements of my project.",
+      " Overall, it was an incredible experience to bring my project to life on the display at the House of Digitalization. I am grateful for the opportunity to showcase my project on this platform",
+      ""],
+      year: "2023",
+    field: "Creative Coding and Shader Programming",
 
     tags: [
       {
-        name: "vvvv",
-        color: "blue-text-gradient",
+        name: "vvvv -Gamma",
       },
       {
         name: "Blender",
-        color: "pink-text-gradient",
       },
     ],
     image: "/rte.png",
+    cover: "/rte.png",
+        images: Array.from({ length: 2 }, (_, i) => `/rte/img${i + 1}.png`)
+
   },
   {
     name:"Arcane Mind",
+    id: "ArcaneMind",
+    sub: "A Tarot Card Reading App",
+    short: "A Tarot Card Reading App that I created in collaboration with a colleague.",
     description:
-      "In the course of two weeks, a colleague and I designed and programmed the Arcane Mind app.",
-      description2: "We started with brainstorming sessions to determine the key features and functionalities that the app should have. Once we had a clear idea of what we wanted, we began the development phase. My colleague and I utilized our programming skills in Kotlin to create the app. We made sure that the app was user- friendly and had a simple interface to ensure seamless navigation.",
-      description3: "The API we used to fetch the cards also played a crucial role in ensuring that the app delivered accurate results. We also incorporated the card designs from the Rider-Waite deck into the app.",
-      description4: "To ensure that the app was visually appealing, we collaborated on creating the logo with my colleague, while I designed the other illustrations. Finally, we put the app to the test by getting feedback from users. We incorporated the feedback we got during user testing, making sure that the app was perfect in every way.",
+     [ "In the course of two weeks, a colleague and I designed and programmed the Arcane Mind app.",
+       "We started with brainstorming sessions to determine the key features and functionalities that the app should have. Once we had a clear idea of what we wanted, we began the development phase. My colleague and I utilized our programming skills in Kotlin to create the app. We made sure that the app was user- friendly and had a simple interface to ensure seamless navigation.",
+      "The API we used to fetch the cards also played a crucial role in ensuring that the app delivered accurate results. We also incorporated the card designs from the Rider-Waite deck into the app.",
+      "To ensure that the app was visually appealing, we collaborated on creating the logo with my colleague, while I designed the other illustrations. Finally, we put the app to the test by getting feedback from users. We incorporated the feedback we got during user testing, making sure that the app was perfect in every way.",
+    ],
+    year: "2024",
+    field: "Mobile Development",
     tags: [
       {
         name: "Figma",
-        color: "blue-text-gradient",
       },
       {
         name: "Kotlin",
-        color: "green-text-gradient",
       },
       {
         name: "Procreate",
-        color: "pink-text-gradient",
       },
     ],
-    image: "/arcanemind.png",
+    image: "/ArcaneMind/img00.png",
+    cover: "/ArcaneMind/img1.png",
+  images: Array.from({ length: 3 }, (_, i) => `/ArcaneMind/img${i + 1}.png`)
   },
     {
     name:"MeetMe",
+    id: "MeetMe",
+    sub: "A Meet-Up App in Figma",
+    short: "Design project for an event app for like-minded people.",
     description:
-      "Design project for an event app for like-minded people.",
-     description2: "“Connect with others who share the same hobbies or interests with MeetMe!”",
-      description3: "In the course of User Interface Design, we were challenged with a design problem about a Meet-Up App for people with the same interests. One of the key features of MeetMe is the ability to create and join groups. Users can create groups based on their interests and invite others to join. ",
-      description4: "This fully functioning prototype was created in Figma, and did not require any coding.",
+   [   "Design project for an event app for like-minded people.",
+    "“Connect with others who share the same hobbies or interests with MeetMe!”",
+      "In the course of User Interface Design, we were challenged with a design problem about a Meet-Up App for people with the same interests. One of the key features of MeetMe is the ability to create and join groups. Users can create groups based on their interests and invite others to join. ",
+       "This fully functioning prototype was created in Figma, and did not require any coding.",
+       ],
+    year: "2023",
+    field: "UI/UX Design",
        tags: [
       {
         name: "Figma",
         color: "blue-text-gradient",
       },
     ],
-    image: "/meetme.png",
+    image: "/MeetMe/img5.png",
+  cover: "/MeetMe/img1.png",
+    images: Array.from({ length: 5 }, (_, i) => `/MeetMe/img${i + 1}.png`)
+
+  },
+  { name: "Wunden (er)zählen",
+    id: "Wunden",
+    sub: "Cover and Illustrations for a Book",
+    short: "Designing 15+ Illustrations and Cover Art for a Book about the personal experience of the author growing up in Austria.",
+    description:
+     [ "Cover and Illustrations for a Book about the personal experience",
+     "This project involved creating a cover and illustrations for a book about the personal experience of the author growing up in Austria"
+    ],
+    year: "2024",
+    field: "Illustration and cover design",
+tags: [
+      {
+        name: "Procreate",
+      },
+     
+    ],
+    image: "/wunden.jpg",
+  cover: "/wunden.jpg",
   }
  
 ];
