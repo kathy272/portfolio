@@ -173,7 +173,7 @@ const projects = [
     description:
    [   "Using the vvvv-Gamma program, a visual live programming environment based on C#, I had the opportunity to bring my project to life on the 69 x 4.5 m display at the House of Digitalization in Tulln.",
       "The live programming environment allowed me to implement my ideas in a simple and intuitive way. The program provides a variety of tools and features that enabled me to create and animate the visual elements of my project.",
-      " Overall, it was an incredible experience to bring my project to life on the display at the House of Digitalization. I am grateful for the opportunity to showcase my project on this platform",
+      " Overall, it was an incredible experience to bring my project to life on the display at the House of Digitalization.",
       ""],
       year: "2023",
     field: "Creative Coding and Shader Programming",
@@ -186,8 +186,8 @@ const projects = [
         name: "Blender",
       },
     ],
-    image: "/rte.png",
-    cover: "/rte.png",
+    image: "/rte/rte.mov",
+    cover: "rte.png",
         images: Array.from({ length: 2 }, (_, i) => `/rte/img${i + 1}.png`)
 
   },
@@ -217,7 +217,7 @@ const projects = [
     ],
     image: "/ArcaneMind/img00.png",
     cover: "/ArcaneMind/img1.png",
-  images: Array.from({ length: 3 }, (_, i) => `/ArcaneMind/img${i + 1}.png`)
+  images: Array.from({ length: 4 }, (_, i) => `/ArcaneMind/img${i + 1}.png`)
   },
     {
     name:"MeetMe",
@@ -238,9 +238,9 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: "/MeetMe/img5.png",
+    image: "/MeetMe/img2.png",
   cover: "/MeetMe/img1.png",
-    images: Array.from({ length: 5 }, (_, i) => `/MeetMe/img${i + 1}.png`)
+    images: Array.from({ length: 2 }, (_, i) => `/MeetMe/img${i + 1}.png`)
 
   },
   { name: "Wunden (er)zählen",

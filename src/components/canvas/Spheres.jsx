@@ -1,9 +1,8 @@
 import React, { useRef, useEffect, useMemo, use } from 'react';
 import * as THREE from 'three';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { useMatcapTexture } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
-import { useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 const radii = [
     1,
@@ -112,7 +111,7 @@ const radii = [
 ];
 const positions = [{ x: 0, y: 0, z: 0 },
 
-{ x: 0.8, y: 0.94, z: 0.3 },
+{ x: 0.8, y: 0.94, z: 0.9 },
 { x: 0.5, y: -1, z: 1.2 },
 { x: -0.16, y: -1.2, z: 0.9 },
 { x: 1.5, y: 1.2, z: 0.8 },
@@ -165,9 +164,7 @@ const positions = [{ x: 0, y: 0, z: 0 },
 { x: -5.1, y: -0.24, z: 1.86 },
 { x: -5.27, y: 1.24, z: 0.76 },
 { x: -5.27, y: 2, z: -0.4 },
-{ x: -6.4, y: 0.4, z: 1 },
 { x: -5.15, y: 0.95, z: 2 },
-{ x: -6.2, y: 0.5, z: -0.8 },
 { x: -4, y: 0.08, z: 1.8 },
 
 { x: 2, y: -0.95, z: 1.5 },
@@ -219,7 +216,7 @@ export default function Spheres() {
     const groupRef = useRef();
     const forcesRef = useRef(new Map());
     const raycaster = useMemo(() => new THREE.Raycaster(), []);
-    const { camera, mouse, viewport } = useThree();
+    const { camera, viewport, gl } = useThree();
     const matcap = useLoader(TextureLoader, '/matcap.png');
 
     const spheres = useMemo(() => {
@@ -242,8 +239,13 @@ export default function Spheres() {
     // Mouse movement → repulsion logic
     function onMouseMove(event) {
         const mouseVector = new THREE.Vector2();
-        mouseVector.x = (event.clientX / window.innerWidth) * 2 - 1;
-        mouseVector.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        // mouseVector.x = (event.clientX / window.innerWidth) * 2 - 1;
+        //mouseVector.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        const rect = gl.domElement.getBoundingClientRect(); // Get canvas position/size on screen
+
+        mouseVector.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        mouseVector.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
 
         raycaster.setFromCamera(mouseVector, camera);
         if (!groupRef.current) return;
@@ -306,7 +308,7 @@ export default function Spheres() {
                 if (distance < minDist) {
                     tempVector.subVectors(sphereB.position, sphereA.position);
                     tempVector.normalize();
-                    const pushStrength = (minDist - distance) *0.4;
+                    const pushStrength = (minDist - distance) * 0.4;
 
                     sphereA.position.sub(tempVector.multiplyScalar(pushStrength));
                     sphereB.position.add(tempVector.multiplyScalar(pushStrength));
@@ -324,7 +326,7 @@ export default function Spheres() {
                     scale={[radius, radius, radius]}
                     castShadow
                     receiveShadow
-                                        userData={{radius}}
+                    userData={{ radius }}
 
                 >
                     <sphereGeometry args={[1, 64, 64]} />

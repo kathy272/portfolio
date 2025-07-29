@@ -39,7 +39,7 @@ const ProjectDetails = () => {
 
             <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full py-10">
                 <div>
-                    <Link to="/"
+                    <Link to="/#work"
                         className="flex items-center gap-2"
                         onClick={() => {
                             setActive("");
@@ -97,9 +97,25 @@ const ProjectDetails = () => {
 
 
 
-                <div className="mt-10 md:mt-20 min-w-80px max-w-200px w-1/2 ">
-                    <img src={project.image}  alt={project.name} className="w-full object-cover " />
-                </div>
+               <div className="mt-10 md:mt-20 min-w-80px w-1/2">
+  {project.image.endsWith('.mov') || project.image.endsWith('.mp4') ? (
+    <video
+      src={project.image}
+      controls
+      className="w-full object-cover"
+      autoPlay
+      loop
+      muted
+    />
+  ) : (
+    <img
+      src={project.image}
+      alt={project.name}
+      className="w-full object-cover"
+    />
+  )}
+</div>
+
 
             </div>
 
@@ -107,24 +123,28 @@ const ProjectDetails = () => {
 
 
 
-            <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="my-masonry-grid"
-                columnClassName="my-masonry-grid_column"
-
-
-            >
-                {project.images?.map((img, idx) => (
-
-                    <img
-                        key={idx}
-                        src={img}
-                        alt={`${project.id}-img-${idx}`}
-                        className="w-full my-2  cursor-pointer object-contain  md:max-h-[450px]"
-                        onClick={() => setSelectedImage(img)}
-                    />
-                ))}
-            </Masonry>
+            <div className="mt-20 flex flex-wrap w-full items-center justify-evenly ">
+                {project.images?.map((media, idx) => {
+                    const isVideo = media.endsWith('.mov') || media.endsWith('.mp4');
+                    return isVideo ? (
+                        <video
+                            key={idx}
+                            src={media}
+                            controls
+                            className="my-2 flex cursor-pointer w-[350px] h-[400px] object-cover md:max-w-[400px] rounded"
+                            onClick={() => setSelectedImage(media)}
+                        />
+                    ) : (
+                        <img
+                            key={idx}
+                            src={media}
+                            alt={`${project.id}-img-${idx}`}
+                            className=" my-2  flex cursor-pointer w-[350px] h-[400px] object-cover  md:max-w-[400px] rounded"
+                            onClick={() => setSelectedImage(media)}
+                        />
+                    )
+                })}
+            </div>
             {selectedImage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
                     <img

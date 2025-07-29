@@ -1,16 +1,16 @@
 import React from "react";
-import {useState,useRef} from "react";
-import {styles} from '../styles';
+import { useState, useRef } from "react";
+import { styles } from '../styles';
 import emailjs from '@emailjs/browser';
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 //import {ContactModel} from "./canvas";
-import { slideIn } from "../utils/motion";  
+import { slideIn } from "../utils/motion";
 import BubbleCanvas from "./canvas/BubbleCanvas";
 
 
-const Contact =() => {
+const Contact = () => {
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -44,7 +44,7 @@ const Contact =() => {
                 },
                 import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
 
-                )
+            )
             .then(
                 () => {
                     setLoading(false);
@@ -61,24 +61,24 @@ const Contact =() => {
                     alert("Something went wrong.");
                 }
             );
-      
+
     }
-    return(
-        <div         id="contact"
+    return (
+        <div id="contact"
 
-        className="xl:mt-12 pt-[150px] flex xl:flex-row flex-col-reverse gap-10 overflow-hidden bg-contact">
+            className="xl:mt-12 pt-[150px] flex xl:flex-row flex-col-reverse gap-10 overflow-hidden bg-contact">
 
-        <motion.div
-            variants={slideIn("left", "tween", 0.2, 1)}
-            className="flex-[0.75]  sm:px-16 px-6 sm:py-20 py-15"
-        >
-            <p className="sm:text-[18px] text-[14px] text-teritary uppercase tracking-wider pt-[120px]">Get in touch!</p>
-            <h3 className= "text-teritary font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact Me</h3>
-         
-                <form 
-                ref={formRef} 
-                onSubmit={handleSubmit} 
-                className="mt-12 flex flex-col gap-8">
+            <motion.div
+                variants={slideIn("left", "tween", 0.2, 1)}
+                className="flex-[0.75]  sm:px-16 px-6 sm:py-20 py-15"
+            >
+                <p className="sm:text-[18px] text-[14px] text-teritary uppercase tracking-wider pt-[120px]">Get in touch!</p>
+                <h3 className="text-teritary font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact Me</h3>
+
+                <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="mt-12 flex flex-col gap-8">
 
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">Your Name</span>
@@ -120,25 +120,25 @@ const Contact =() => {
                         hover:bg-secondary transition-colors duration-300 rounded-xl"
                         disabled={loading}
                     >
-                        {loading ? "Sending..." : "Send"}   
+                        {loading ? "Sending..." : "Send"}
                     </button>
                 </form>
             </motion.div>
-        <motion.div
-            variants={slideIn("right", "tween", 0.2, 1
-            )}
-            className="xl:flex-1 xl:h-auto md:h-[550px] h-[500px] pt-[150px]">
-            {/* <ContactModel /> */}    
-            <BubbleCanvas />
+            <motion.div
+                variants={slideIn("right", "tween", 0.2, 1
+                )}
+                className="xl:flex-1 xl:h-auto md:h-[550px] h-[500px] pt-[150px]">
+                {/* <ContactModel /> */}
+                <BubbleCanvas />
 
-        </motion.div>
+            </motion.div>
 
-              </div>
-  
+        </div>
+
     );
-    };
+};
 
-    
+
 
 
 export default Contact;
