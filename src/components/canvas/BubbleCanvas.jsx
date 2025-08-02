@@ -9,7 +9,7 @@ export default function BubbleCanvas() {
       shadows
       camera={{ position: [0, 0, 5.5], fov: 65 }} //default 0,0,5 and 75
       //style={{ width: '100vw', height: '100vh' }}
-        className="w-[90vw] h-[60vh] md:w-[60vw] md:h-[70vh]"
+        className="w-full h-[60vh] sm:w-full md:w-[60vw] md:h-[70vh]"
 
       //style={{ width: '60vw', height: '70vh' }}
     >

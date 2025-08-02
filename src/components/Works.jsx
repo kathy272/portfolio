@@ -8,6 +8,8 @@ import { projects } from "../constants";
 import { textVariant } from "../utils/motion";
 import Masonry from "react-masonry-css";
 import {Link} from "react-router-dom";
+import ProjectModal from "./ProjectModal";
+import { useState } from "react";
 
 const breakpointColumnsObj = {
   default: 3,
@@ -15,9 +17,11 @@ const breakpointColumnsObj = {
   700: 1,
 }; // Define responsive breakpoints for Masonry layout
 
-const WorksCard = ({ index, name, sub, short, cover, description, tags, image }) => {
+const WorksCard = ({ index, name, sub, short, cover, tags, onClick }) => {
   return (
-    <Link to={`/projects/${name}`} className="group">
+   // <Link to={`/projects/${name}`} className="group">
+       <div onClick={onClick} className="group cursor-pointer">
+
     <Tilt
       className="xs:w-[300px] w-full"
       options={{
@@ -49,10 +53,13 @@ const WorksCard = ({ index, name, sub, short, cover, description, tags, image })
         </div>
       </motion.div>
     </Tilt>
-    </Link>
+    </div>
+
   );
 };
 const Works =() => {
+const [activeProject, setActiveProject] = React.useState(null);
+
     return(
         <>
              <motion.div variants={textVariant()}>
@@ -71,10 +78,17 @@ const Works =() => {
             </motion.p>
             <div className="mt-20 flex flex-wrap gap-10 justify-center">
             {projects.map((project, index) => (
-              <WorksCard key={project.name} index={index} {...project} />
+              <WorksCard key={project.name} index={index} {...project} 
+                onClick={() => setActiveProject(project)}
+/>
             ))}
           </div>
-      
+      {activeProject && (
+  <ProjectModal
+    project={activeProject}
+    onClose={() => setActiveProject(null)}
+  />
+)}
         </>
     );
 

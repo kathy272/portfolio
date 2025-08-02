@@ -22,36 +22,42 @@ module.exports = {
         "hero-pattern": "url('/src/assets/herobg.png')",
         "contact": "url('/src/assets/background_01.png')",
         "about": "url('/src/assets/background_02.png')",
-                "small": "url('/src/assets/bg_small.png')"
+        "small": "url('/src/assets/bg_small.png')",
+        "tideUp": "url('/TideUp/tideUp_background.png')",
+        "rte1": "url('/rte/rte_textbg.png')",
+        "rte2": "url('/rte/rte_textbg2.png')",
+        "arcane": "url('/ArcaneMind/am_bg.png')",
+        "wunden": "url('/Wunden/bg.png')",
+
 
       },
-      animation:{
+      animation: {
         typewriter: "typewriter 2s steps(11) forwards"
 
       },
-      keyframes:{
-        typewriter:{
-            from: { width: "0" },
-    to: { width: "100%" },
+      keyframes: {
+        typewriter: {
+          from: { width: "0" },
+          to: { width: "100%" },
         }
       },
-       blink: {
-          '0%': {
-            opacity: '0',
-          },
-          '0.1%': {
-            opacity: '1',
-          },
-          '50%': {
-            opacity: '1',
-          },
-          '50.1%': {
-            opacity: '0',
-          },
-          '100%': {
-            opacity: '0',
-          },
+      blink: {
+        '0%': {
+          opacity: '0',
         },
+        '0.1%': {
+          opacity: '1',
+        },
+        '50%': {
+          opacity: '1',
+        },
+        '50.1%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '0',
+        },
+      },
     },
   },
   plugins: [],

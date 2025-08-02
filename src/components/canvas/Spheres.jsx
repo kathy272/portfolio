@@ -220,11 +220,13 @@ export default function Spheres() {
     const matcap = useLoader(TextureLoader, '/matcap.png');
 
     const spheres = useMemo(() => {
-        return positions.map((pos, i) => ({
+        return positions
+        .map((pos, i) => ({
             position: [pos.x, pos.y, pos.z - 5],
             radius: radii[i] || 0.2,
             key: i,
         }));
+       
     }, []);
 
     // Save original positions
@@ -261,8 +263,9 @@ export default function Spheres() {
         }
     }
 
-    // Add listener once
     useEffect(() => {
+        
+    
         window.addEventListener('mousemove', onMouseMove);
         return () => window.removeEventListener('mousemove', onMouseMove);
     }, []);
@@ -273,6 +276,7 @@ export default function Spheres() {
 
         groupRef.current.children.forEach((sphere, i) => {
             const original = originalPositions.current[i];
+            if (!original) return;
             const force = forcesRef.current.get(sphere.uuid) || new THREE.Vector3(0, 0, 0);
 
             // Apply force

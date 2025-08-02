@@ -66,7 +66,7 @@ const Contact = () => {
     return (
         <div id="contact"
 
-            className="xl:mt-12 pt-[150px] flex xl:flex-row flex-col-reverse gap-10 overflow-hidden bg-contact">
+            className="xl:mt-12 pt-[150px] flex xl:flex-row flex-col-reverse gap-10  bg-contact">
 
             <motion.div
                 variants={slideIn("left", "tween", 0.2, 1)}
@@ -128,7 +128,6 @@ const Contact = () => {
                 variants={slideIn("right", "tween", 0.2, 1
                 )}
                 className="xl:flex-1 xl:h-auto md:h-[550px] h-[500px] pt-[150px]">
-                {/* <ContactModel /> */}
                 <BubbleCanvas />
 
             </motion.div>
