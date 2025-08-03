@@ -2,7 +2,7 @@ import React from 'react';
 
 const Project4 = () => {
   return (
-    <div className="max-w-9/10   bg-arcane">
+    <div className="max-w-9/10   bg-[#000000]">
 
       <img src="/ArcaneMind/top.png" className="w-full pt-20  h-auto " alt="real time engine title" />
 

@@ -1,41 +1,44 @@
 import React from "react";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
-import {styles} from '../styles';
+import { styles } from '../styles';
 import { section } from "framer-motion/client";
 import ModelCanvas from "./canvas/ModelMain";
 import BubbleCanvas from "./canvas/BubbleCanvas";
 
 
-const Hero =() => {
-    return(
-<section className="relative w-full h-screen mx-auto">
-<div className={`${styles.paddingX} absolute inset-0 top-[120px] mx-auto flex-row max-w-7xl items-start gap-5`}>
-    <div className="flex flex-col justify-center items-center mt-5"></div>
+const Hero = () => {
+  return (
+    <section className="relative w-full h-screen mx-auto ">
+      <div className={`${styles.paddingX} absolute inset-0 top-[120px] mx-auto flex-row max-w-7xl items-start gap-5`}>
+        <div className="flex flex-col justify-center items-center mt-5"></div>
 
-<div>
-<h1 className={`${styles.heroHeadText} text-secondary `}>
-Hi, I'm <span className="text-secondary">Kathy</span></h1>
- <p className={`${styles.heroSubText} mt-2 text-secondary-100`}>
-            I love to explore and create <br className='sm:block hidden' />
-            new experiences for users!
+        <div >
+          <h1 className={`${styles.heroHeadText} text-secondary `}>
+            Hi, I'm <span className="text-[#69B8E4]">Kathy ;) </span></h1>
+          <p className={`${styles.heroSubText} mt-2 text-secondary-100`}>
+            I am a passionate Designer and
+            <br className='sm:block hidden' />
+            Front-End Developer looking<br className='sm:block hidden' />
+            to create creative digital experiences.
+
           </p>
-</div>
-</div>
-<ModelCanvas/>
-<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-  <a href="#about">
-    <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-      <motion.div
-        animate={{ y: [0, 24, 0]}}
-        transition={{ duration: 1.5, repeat: Infinity, repeatType: 'loop' }}
-        className="w-3 h-3 rounded-full bg-secondary mb-1"      
-        ></motion.div>
         </div>
+      </div>
+      <ModelCanvas />
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+        <a href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={{ y: [0, 24, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatType: 'loop' }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            ></motion.div>
+          </div>
         </a>
 
-  </div>
-</section>
-    )
+      </div>
+    </section>
+  )
 }
 export default Hero;

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { projectComponents } from "../constants/projectComponents";
 import { div } from "framer-motion/client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 
@@ -59,7 +59,7 @@ const ProjectModal = ({ project, onClose }) => {
                 </button>
 
                 <div className="flex flex-col justify-center w-full  ">
-                    <div className="flex-1 ">{ProjectComponent && <ProjectComponent />}</div>
+                    <div className="flex-1 ">{ProjectComponent && <ProjectComponent  />}</div>
 
 
                 </div>

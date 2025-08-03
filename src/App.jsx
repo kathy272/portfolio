@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import{
-  About, Contact, Experience, Hero, Navbar, Works, ProjectDetails} from './components';
+  About, Contact, Experience, Hero, Navbar, Works, } from './components';
 const App = () => {
   return (
 
@@ -9,7 +9,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={
          <div className="relative z-0 bg-primary">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+      <div className="bg-cover bg-no-repeat bg-center">
         <Navbar/>
         <Hero/>
       </div>
@@ -24,15 +24,7 @@ const App = () => {
 
       } />
 
-    <Route path="/projects/:name" element={
-      <div className="relative z-0 bg-primary">
-              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-
-        <Navbar/>
-        <ProjectDetails/>
-      </div>
-      </div>
-    } />
+   
     </Routes>
 
     </BrowserRouter>

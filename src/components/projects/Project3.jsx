@@ -3,12 +3,12 @@ import React from 'react';
 const Project3 = () => {
   return (
     <div className="max-w-9/10   bg-[#000000]">
-      <div className='flex flex-col sm:flex-row w-full '>
+      <div className='flex flex-col lg:flex-row w-full '>
 
-        <img src="/rte/top.png" className="w-full pl-10 pt-20 md:w-5/6 h-auto " alt="real time engine title" />
+        <img src="/rte/top.png" className="w-full lg:w-1/2 xl:w-3/4 pl-10 pt-20 h-auto " alt="real time engine title" />
 
 
-        <video src="/rte/rte.mov" controls className="w-full sm:pr-10 h-auto pt-20 md:w-1/2 object-cover" autoPlay
+        <video src="/rte/rte.mov" controls className="w-full sm:pr-10 h-auto pt-20 lg:w-1/2 object-cover" autoPlay
           loop
           muted
           alt="video of the 360° show"

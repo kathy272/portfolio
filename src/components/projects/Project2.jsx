@@ -35,8 +35,8 @@ const Project2 = () => {
 
         <img src="/ARMap/img4.png" className="max-w-4xl max-w-full mx-auto  object-cover" alt="ar map version 1" />
         <img src="/ARMap/img3.png" className=" max-w-full mx-auto  object-cover" alt="workflow for shader" />
-        <img src="/ARMap/img2.png" className=" max-w-full mx-auto  object-cover" alt="workflow for video stream" />
-        <img src="/ARMap/img1.png" className="max-w-full md:max-w-1/2 mx-auto  object-contain" alt="ar map version 2.0" />
+        <img src="/ARMap/img2.png" className=" max-w-full w-3/4 mx-auto  object-cover" alt="workflow for video stream" />
+        <img src="/ARMap/img1.png" className="max-w-full w-2/3 md:max-w-1/2 mx-auto  object-contain" alt="ar map version 2.0" />
       </div>
     </div>
   );

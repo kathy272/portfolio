@@ -6,16 +6,10 @@ import { fadeIn } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { textVariant } from "../utils/motion";
-import Masonry from "react-masonry-css";
 import {Link} from "react-router-dom";
 import ProjectModal from "./ProjectModal";
 import { useState } from "react";
 
-const breakpointColumnsObj = {
-  default: 3,
-  1100: 2,
-  700: 1,
-}; // Define responsive breakpoints for Masonry layout
 
 const WorksCard = ({ index, name, sub, short, cover, tags, onClick }) => {
   return (

@@ -35,8 +35,8 @@ const AreaCard = ({ index, title }) => {
 };
 const About = () => {
     return (
-        <section id="about" className="pt-[150px]">
-            <div className="bg-about w-full object-fit bg-right bg-no-repeat">
+        <section id="about" className="pt-[150px] bg-about  bg-right  bg-cover bg-no-repeat">
+            <div className=" w-full h-full object-fit ">
                 <div className="`${styles.padding} max-w-7xl mx-auto relative z-0`">
                     <motion.div variants={{ textVariant: textVariant(0.1) }}>
                         <p className={styles.sectionSubText}>Introduction</p>
@@ -46,15 +46,50 @@ const About = () => {
                     <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
                         className="mt-4 text-secondary text-[17px] max-w-6xl leading-[30px]">
                         Born and raised in Salzburg, Austria, I’ve always been fascinated by design and technology. After finishing an academic high school program focused on linguistics, I moved to Vienna at 19 to travel the world as a flight attendant. Those adventures gave me a lot of inspiration and helped me build a rich visual library.
-<br/>
+                        <br />
                         Eventually, I decided to study Creative Computing in Saint Pölten, where I got to dive deeper into combining design and storytelling with tech. I love blending creativity with technical skills to make immersive experiences, and I’m excited to find a creative space where I can keep exploring and making cool things happen! ;)
                     </motion.p>
-                    <div className="mt-20 flex flex-wrap gap-10 justify-evenly items-center ">
+                                            <h2 className="text-secondary font-black py-10 md:text-[40px] sm:text-[30px] xs:text-[20px] text-[20px]">Areas</h2>
+
+                    <div className=" flex flex-wrap gap-10 justify-evenly items-center ">
                         {areas.map((area, index) => (
                             <AreaCard key={area.title} index={index} {...area} />
                         ))}
 
                     </div>
+
+
+                    <motion.div className="pb-10" variants={{ textVariant: textVariant(0.1) }}>
+                        <h2 className="text-secondary  font-black py-10 md:text-[40px] sm:text-[30px] xs:text-[20px] text-[20px]">
+                            Technical Skills</h2>
+                        <div className="flex flex-col md:flex-row md:flex-wrap px-5 gap-10 justify-between  ">
+
+ <Tilt
+           className=" w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
+                                <h2 className="text-secondary p-5 uppercase text-[20px] md:text-[30px] sm:text-[20px]  ">Coding</h2>
+                                <p className="text-secondary font-medium px-5 pb-5">Kotlin, Jetpack compose, Unity, <br />
+                                    HTML, CSS, JavaScript, C#, React.js, Vue.js, Nuxt.js, Node.js,
+                                    SQLite, MySQL, some Python <br/>
+                                    vvvv-Gamma (realtime engines)
+                                </p>
+                          </Tilt>
+                             <Tilt
+            className="w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
+                                <h2 className="text-secondary uppercase p-5 text-[20px] md:text-[30px] sm:text-[20px]  ">UI/UX and Design</h2>
+                                <p className="text-secondary font-medium px-5 pb-5">Figma, Canva, some Photoshop, <br/>
+                                    Blender, Procreate, Aseprite
+
+                                </p>
+                            </Tilt>
+                             <Tilt
+            className="w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
+                                <h2 className="text-secondary uppercase p-5 text-[20px] md:text-[30px] sm:text-[20px]  ">User research</h2>
+                                <p className="text-secondary font-medium px-5 pb-5">
+                                    Persona Development, Heuristic Evaluation, User Testing, User Interviews, Storyboarding
+                                </p>
+                            </Tilt>
+                        </div>
+                    </motion.div>
                 </div></div>
 
         </section>

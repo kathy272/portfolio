@@ -11,8 +11,8 @@ import {textVariant} from "../utils/motion";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#363636", color: "#363636" }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentStyle={{ background: "#363636", color: "white" }}
+      contentArrowStyle={{ borderRight: "7px solid  white" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg  }}
      // icon={<div className="flex justify-center items-center w-full h-full"><img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" /></div>}
@@ -35,20 +35,21 @@ const ExperienceCard = ({ experience }) => {
 // Component to display work experience in a vertical timeline format
 const Experience = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-left`}>
+    <section className="bg-secondary">
+      <motion.div      className={`${styles.padding} max-w-7xl mx-auto relative`}
+ variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-left text-white`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-left`}>
+        <h2 className={`${styles.sectionHeadText} text-left text-white`}>
           Work Experience
         </h2>
       </motion.div>
 
-         <div className='mt-20 flex flex-col '>
+         <div className='flex flex-col '>
         <VerticalTimeline 
         className="mt-10"
-        lineColor="#232631"
+        lineColor="white"
         >
           {experiences.map((experience, index) => (
             <ExperienceCard
@@ -58,9 +59,9 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+</section>    
   );
 };
 
 
-export default SectionWrapper(Experience, "experience");
+export default Experience;

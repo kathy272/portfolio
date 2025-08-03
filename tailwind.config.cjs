@@ -21,13 +21,11 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
         "contact": "url('/src/assets/background_01.png')",
-        "about": "url('/src/assets/background_02.png')",
+        "about": "url('/src/assets/background_02.svg')",
         "small": "url('/src/assets/bg_small.png')",
         "tideUp": "url('/TideUp/tideUp_background.png')",
         "rte1": "url('/rte/rte_textbg.png')",
         "rte2": "url('/rte/rte_textbg2.png')",
-        "arcane": "url('/ArcaneMind/am_bg.png')",
-        "wunden": "url('/Wunden/bg.png')",
 
 
       },

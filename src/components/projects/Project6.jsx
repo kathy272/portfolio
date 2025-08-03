@@ -2,9 +2,9 @@ import React from 'react';
 
 const Project6 = () => {
   return (
-    <div className="max-w-9/10  bg-wunden ">
+    <div className="max-w-9/10  bg-[#10110F] ">
 
-      <img src="/Wunden/top.svg" className="w-full pt-20  h-auto " alt="cover design" />
+      <img src="/Wunden/wunden_top.png" className="w-full h-auto " alt="cover design" />
 
 
   <div className='flex-col max-w-full py-10 px-10 sm:px-20 xl:px-40 sm:w-full'>
@@ -12,8 +12,7 @@ const Project6 = () => {
           Wunden (er)zählen
         </h1>
         <p className="text-lg text-primary">
-               For this project I created a book cover and various personalized illustrations fitting for each chapter. 
- </p>
+For this book, I created the cover and a series of illustrations highlighting key moments from the story. Written by author Pierra Isabella Bernamonti and published by story.one in 2024, the book explores the emotional journey of growing up as an immigrant in Austria. Each illustration is closely tied to the narrative, emphasizing the author’s emotional highs and lows of the author growing up as an immigrant in Austria. </p>
 
       
 
@@ -27,10 +26,10 @@ const Project6 = () => {
 
 
 
-      <img src="/Wunden/cover.png" className=" w-full sm:w-1/2 md:w-2/3 py-10 h-auto mx-auto pr-5  " alt="user flow meetme" />
+      <img src="/Wunden/wunden_book.jpg" className=" w-full sm:w-1/2 md:w-2/3 py-10 h-auto mx-auto pr-5  " alt="the book" />
 
 
-      <img src="/Wunden/illustrations.png" className="max-w-full py-10 px-5  mx-auto object-cover" alt="MeetMe apps" />
+      <img src="/Wunden/illustrations.png" className="max-w-full py-10 px-5  mx-auto object-cover" alt="illustrations" />
 
 
 
