@@ -41,7 +41,9 @@ const Project3 = () => {
           2024
         </h3>
         <h3 className="text-lg font-bold  text-primary">Shader programming</h3>
-
+    <h3 className="text-lg py-3  text-primary">
+          C#
+        </h3>
    
          
         </div>

@@ -8,6 +8,7 @@ import { Tilt } from "react-tilt";
 import { SectionWrapper } from "../hoc";
 
 
+
 const AreaCard = ({ index, title }) => {
     return (
         <Tilt
@@ -39,6 +40,7 @@ const About = () => {
             <div className=" w-full h-full object-fit ">
                 <div className="`${styles.padding} max-w-7xl mx-auto relative z-0`">
                     <motion.div variants={{ textVariant: textVariant(0.1) }}>
+
                         <p className={styles.sectionSubText}>Introduction</p>
                         <h2 className={styles.sectionHeadText}>About Me</h2>
                     </motion.div>
@@ -49,7 +51,8 @@ const About = () => {
                         <br />
                         Eventually, I decided to study Creative Computing in Saint Pölten, where I got to dive deeper into combining design and storytelling with tech. I love blending creativity with technical skills to make immersive experiences, and I’m excited to find a creative space where I can keep exploring and making cool things happen! ;)
                     </motion.p>
-                                            <h2 className="text-secondary font-black py-10 md:text-[40px] sm:text-[30px] xs:text-[20px] text-[20px]">Areas</h2>
+                    
+                    <h2 className="text-secondary font-black py-10 md:text-[40px] sm:text-[30px] xs:text-[20px] text-[20px]">Areas</h2>
 
                     <div className=" flex flex-wrap gap-10 justify-evenly items-center ">
                         {areas.map((area, index) => (
@@ -60,29 +63,29 @@ const About = () => {
 
 
                     <motion.div className="pb-10" variants={{ textVariant: textVariant(0.1) }}>
-                        <h2 className="text-secondary  font-black py-10 md:text-[40px] sm:text-[30px] xs:text-[20px] text-[20px]">
+                        <h2 className="text-white  font-black py-10 md:text-[40px] xl:text-secondary  sm:text-[30px] xs:text-[20px] text-[20px]">
                             Technical Skills</h2>
                         <div className="flex flex-col md:flex-row md:flex-wrap px-5 gap-10 justify-between  ">
 
- <Tilt
-           className=" w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
+                            <Tilt
+                                className=" w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
                                 <h2 className="text-secondary p-5 uppercase text-[20px] md:text-[30px] sm:text-[20px]  ">Coding</h2>
                                 <p className="text-secondary font-medium px-5 pb-5">Kotlin, Jetpack compose, Unity, <br />
                                     HTML, CSS, JavaScript, C#, React.js, Vue.js, Nuxt.js, Node.js,
-                                    SQLite, MySQL, some Python <br/>
+                                    SQLite, MySQL, some Python <br />
                                     vvvv-Gamma (realtime engines)
                                 </p>
-                          </Tilt>
-                             <Tilt
-            className="w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
+                            </Tilt>
+                            <Tilt
+                                className="w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
                                 <h2 className="text-secondary uppercase p-5 text-[20px] md:text-[30px] sm:text-[20px]  ">UI/UX and Design</h2>
-                                <p className="text-secondary font-medium px-5 pb-5">Figma, Canva, some Photoshop, <br/>
+                                <p className="text-secondary font-medium px-5 pb-5">Figma, Canva, some Photoshop, <br />
                                     Blender, Procreate, Aseprite
 
                                 </p>
                             </Tilt>
-                             <Tilt
-            className="w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
+                            <Tilt
+                                className="w-full md:w-2/5 bg-white bg-opacity-20 rounded-md	backdrop-blur-sm border-white">
                                 <h2 className="text-secondary uppercase p-5 text-[20px] md:text-[30px] sm:text-[20px]  ">User research</h2>
                                 <p className="text-secondary font-medium px-5 pb-5">
                                     Persona Development, Heuristic Evaluation, User Testing, User Interviews, Storyboarding

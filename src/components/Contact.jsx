@@ -5,7 +5,6 @@ import emailjs from '@emailjs/browser';
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
-//import {ContactModel} from "./canvas";
 import { slideIn } from "../utils/motion";
 import BubbleCanvas from "./canvas/BubbleCanvas";
 import LinkedIn from "/icons/linkedIn.svg"

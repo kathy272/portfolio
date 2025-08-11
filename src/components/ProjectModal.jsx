@@ -7,7 +7,6 @@ import { useState, useEffect, useRef } from "react";
 
 
 const ProjectModal = ({ project, onClose }) => {
-      const [loading, setLoading] = useState(true);
     const ProjectComponent = projectComponents[project.name];
     const handleBackgroundClick = (event) => {
         if (event.target === event.currentTarget) {
@@ -15,24 +14,13 @@ const ProjectModal = ({ project, onClose }) => {
         }
     };
     
-    useEffect(() => {
-  const timer = setTimeout(() => {
-    setLoading(false);
-  }, 1000); 
-
-    return () => clearTimeout(timer);
-}, []);
-
+   
     return (
         
         <div
             className="fixed inset-0 z-50 flex flex-col sm:flex-row items-start justify-center sm:items-center sm:bg-black sm:bg-opacity-80 p-0 sm:p-4" onClick={handleBackgroundClick}
         >
-  {loading ? (
-      <div className="flex items-center justify-center w-full h-full bg-black text-white text-xl">
-        Loading...
-      </div>
-    ) : (
+
       <>
       
 
@@ -94,7 +82,7 @@ const ProjectModal = ({ project, onClose }) => {
                 ))}
             </div>
               </>
-    )}
+    
         </div>
     );
 };

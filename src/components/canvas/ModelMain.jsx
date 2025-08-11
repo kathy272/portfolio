@@ -89,7 +89,7 @@ const Model = ({ isMobile, controlsRef }) => {
                     rotation={[-0.01, -0.7, -0.1]}
                     castShadow
                     receiveShadow />
-                <Steam position={isMobile ? [-2.2, -1.0, -1.5] : [-4.0, -1.5, -9.0]} isMobile={isMobile} />
+                <Steam position={isMobile ? [-2.2, -1.0, -1.5] : [-4.0, -1.5, -9.2]} isMobile={isMobile} />
 
             </group>
         </mesh>

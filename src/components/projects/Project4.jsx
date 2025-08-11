@@ -32,7 +32,9 @@ the card designs from the Rider-Waite deck into the app.</p>
           2024
         </h3>
         <h3 className="text-lg font-bold  text-primary">Mobile UI/UX and development</h3>
-
+    <h3 className="text-lg py-3  text-primary">
+          Kotlin
+        </h3>
       </div>
 
 

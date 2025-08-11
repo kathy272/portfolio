@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { AsyncImage } from 'loadable-image'
+
 //tideUp
-const Project1 = () => {
+const Project1 = ({}) => {
   
   return (
   <div className="max-w-9/10   bg-tideUp bg-cover">      
-  <img src="/TideUp/top.png" className="max-w-4xl max-w-full mx-auto pb-5 sm:pt-20" alt="tideup header" />
+  <img   src="/TideUp/top.png" className="max-w-4xl max-w-full mx-auto pb-5 sm:pt-20" alt="tideup header" />
       <div className='flex-col max-w-full py-10 px-10 sm:px-20 xl:px-40 sm:w-full'>
         <h1 className="text-4xl font-black text-gray-700 pb-[20px] uppercase">
           TideUp

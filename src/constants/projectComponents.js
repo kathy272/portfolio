@@ -4,6 +4,8 @@ import Project3 from "../components/projects/Project3";
 import Project4 from "../components/projects/Project4";
 import Project5 from "../components/projects/Project5";
 import Project6 from "../components/projects/Project6";
+import Project7 from "../components/projects/Project7";
+
 
 export const projectComponents = {
   "TideUp": Project1,
@@ -12,5 +14,6 @@ export const projectComponents = {
   "Arcane Mind": Project4,
   "MeetMe": Project5,
     "Wunden (er)zählen": Project6,
+    "Portfolio Website": Project7,
 
 };

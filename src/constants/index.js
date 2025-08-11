@@ -140,11 +140,7 @@ const projects = [
         icon: "/icons/figma.svg"
 
       },
-      {
-        name: "Websocket",
-        icon: "/icons/websocket.svg"
-
-      },
+      
     ],
     cover: "/ARMap/cover.png",
 
@@ -158,7 +154,7 @@ const projects = [
 
     tags: [
       {
-        name: "vvvv -Gamma",
+        name: "vvvv - Gamma",
         icon: "/icons/vvvv.svg"
 
       },
@@ -203,7 +199,7 @@ const projects = [
     tags: [
       {
         name: "Figma",
-        color: "blue-text-gradient",
+        icon: "/icons/procreate.svg"
 
       },
     ],
@@ -225,6 +221,34 @@ const projects = [
 
     ],
     cover: "/Wunden/wunden_book.jpg",
+  },
+  {
+    name: "Portfolio Website",
+    id: "portfolio",
+    sub: "Website design and programming",
+    short: "This portfolio website was built with React, ThreeJS and TailwindCSS.",
+
+    tags: [
+      {
+        name: "Procreate",
+        icon: "/icons/procreate.svg"
+
+      },
+          {
+        name: "Figma",
+        icon: "/icons/figma.svg"
+
+      },
+      {
+        name: "Git",
+        icon: "/icons/git.svg"
+
+      },
+     
+
+
+    ],
+    cover: "/Portfolio/cover.jpg",
   }
 
 ];

@@ -30,7 +30,9 @@ const Project2 = () => {
             2025
           </h3>
           <h3 className="text-lg font-bold  text-gray-700">Ar development, API integration, real-time map creation</h3>
-
+    <h3 className="text-lg py-3  text-gray-700">
+          C#, Stable Diffusion API, Python, Websocket
+        </h3>
         </div>
 
         <img src="/ARMap/img4.png" className="max-w-4xl max-w-full mx-auto  object-cover" alt="ar map version 1" />
