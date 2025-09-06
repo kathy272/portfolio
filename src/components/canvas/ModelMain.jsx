@@ -1,11 +1,13 @@
 import { Suspense, useEffect, useState, useRef, useMemo } from "react";
+const base = import.meta.env.BASE_URL;
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from 'three';
 import { CanvasLoader } from "../Loader";
 import { u } from "framer-motion/client";
 //import spriteTexture from './textures/displayFace.png'
-const tex = new THREE.TextureLoader().load("/Main/textures/displayFace.png");
+const tex = new THREE.TextureLoader().load(`${base}Main/textures/displayFace.png`);
+
 import { useInView } from 'react-intersection-observer';
 
 
@@ -54,7 +56,8 @@ const Steam = ({ count = 3, position = [0, 0, 0], isMobile = false }) => {
 
 
 const Model = ({ isMobile, controlsRef }) => {
-    const model = useGLTF('./Main/scene.gltf');
+const model = useGLTF(`${base}Main/scene.gltf`);
+
     model.scene.traverse(function (child) {
 
         if (child.isMesh) {

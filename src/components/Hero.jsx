@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
-import { section } from "framer-motion/client";
+//import { section } from "framer-motion/client";
 import ModelCanvas from "./canvas/ModelMain";
-import BubbleCanvas from "./canvas/BubbleCanvas";
+//import BubbleCanvas from "./canvas/BubbleCanvas";
 
 
 const Hero = () => {

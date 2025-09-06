@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import{
   About, Contact, Experience, Hero, Navbar, Works, } from './components';
+
 const App = () => {
+    console.log("App component rendered");
   return (
 
     <BrowserRouter>

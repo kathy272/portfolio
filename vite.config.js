@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-export default defineConfig({
+
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/portfolio/' : '/',
   plugins: [react()],
-})
+}))

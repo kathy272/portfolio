@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { AsyncImage } from 'loadable-image'
-
+const base = import.meta.env.BASE_URL;
 //tideUp
 const Project1 = ({}) => {
   
   return (
   <div className="max-w-9/10   bg-tideUp bg-cover">      
-  <img   src="/TideUp/top.png" className="max-w-4xl max-w-full mx-auto pb-5 sm:pt-20" alt="tideup header" />
+  <img   src={`${base}TideUp/top.png`} className="max-w-4xl max-w-full mx-auto pb-5 sm:pt-20" alt="tideup header" />
       <div className='flex-col max-w-full py-10 px-10 sm:px-20 xl:px-40 sm:w-full'>
         <h1 className="text-4xl font-black text-gray-700 pb-[20px] uppercase">
           TideUp
@@ -28,11 +28,11 @@ const Project1 = ({}) => {
       </div>
 
 
-      <img src="/TideUp/img11.png" className=" max-w-full mx-auto  object-cover" alt="tideUpMainCharacter" />
-      <img src="/TideUp/npcs.png" className="max-w-full mx-auto object-cover py-5" alt="tideUpnpcs" />
-      <img src="/TideUp/screenshots.png" className="max-w-full mx-auto py-5" alt="tideUpnpcs" />
-      <img src="/TideUp/othermodels1.png" className="max-w-full mx-auto py-5" alt="tideUpnpcs" />
-      <img src="/TideUp/othermodels2.png" className="max-w-full mx-auto py-5" alt="tideUpnpcs" />
+      <img src={`${base}TideUp/img11.png`}className=" max-w-full mx-auto  object-cover" alt="tideUpMainCharacter" />
+      <img src={`${base}TideUp/npcs.png`}className="max-w-full mx-auto object-cover py-5" alt="tideUpnpcs" />
+      <img src={`${base}TideUp/screenshots.png`} className="max-w-full mx-auto py-5" alt="tideUpnpcs" />
+      <img src={`${base}TideUp/othermodels1.png`} className="max-w-full mx-auto py-5" alt="tideUpnpcs" />
+      <img src={`${base}TideUp/othermodels2.png`}  className="max-w-full mx-auto py-5" alt="tideUpnpcs" />
 
 
 
