@@ -5,22 +5,24 @@ import { styles } from '../styles';
 //import { section } from "framer-motion/client";
 import ModelCanvas from "./canvas/ModelMain";
 //import BubbleCanvas from "./canvas/BubbleCanvas";
+const base = import.meta.env.BASE_URL;
 
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto ">
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] mx-auto flex-row max-w-7xl items-start gap-5`}>
+      <div className={`${styles.paddingX} absolute inset-0 top-[150px] mx-auto flex-row max-w-7xl items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5"></div>
 
         <div >
           <h1 className={`${styles.heroHeadText} text-secondary `}>
-            Hi, I'm <span className="text-[#69B8E4]">Kathy ;) </span></h1>
+
+           <span className="text-[#797979]">Hey! </span> I'm Kathy</h1>
           <p className={`${styles.heroSubText} mt-2 text-secondary-100`}>
             I am a passionate Designer and
             <br className='sm:block hidden' />
             Front-End Developer looking<br className='sm:block hidden' />
-            to create creative digital experiences.
+            to create creative digital experiences. 
 
           </p>
         </div>

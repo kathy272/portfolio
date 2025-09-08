@@ -1,14 +1,16 @@
 import React from 'react';
+const base = import.meta.env.BASE_URL;
 
+//real time engine
 const Project3 = () => {
   return (
     <div className="max-w-9/10   bg-[#000000]">
       <div className='flex flex-col lg:flex-row w-full '>
 
-        <img src="/rte/top.png" className="w-full lg:w-1/2 xl:w-3/4 pl-10 pt-20 h-auto " alt="real time engine title" />
+        <img src={`${base}rte/top.png`}  className="w-full lg:w-1/2 xl:w-3/4 pl-10 pt-20 h-auto " alt="real time engine title" />
 
 
-        <video src="/rte/rte.mov" controls className="w-full sm:pr-10 h-auto pt-20 lg:w-1/2 object-cover" autoPlay
+        <video src={`${base}rte/rte.mov`}  controls className="w-full sm:pr-10 h-auto pt-20 lg:w-1/2 object-cover" autoPlay
           loop
           muted
           alt="video of the 360° show"
@@ -47,12 +49,12 @@ const Project3 = () => {
    
          
         </div>
-        <img src="/rte/img1.png" className="max-w-4xl max-w-full mx-auto py-20 object-cover" alt="Real time engine shader graph" />
+        <img src={`${base}rte/img1.png`}  className="max-w-4xl max-w-full mx-auto py-20 object-cover" alt="Real time engine shader graph" />
 
         <div className='bg-rte2 bg-cover py-10'>
           
         </div>
-        <img src="/rte/img2.png" className="max-w-4xl max-w-full mx-auto py-20 object-cover" alt="Real time engine shader graph" />
+        <img src={`${base}rte/img2.png`} className="max-w-4xl max-w-full mx-auto py-20 object-cover" alt="Real time engine shader graph" />
 
       </div>
 

@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { CanvasLoader } from "../Loader";
 import { u } from "framer-motion/client";
 //import spriteTexture from './textures/displayFace.png'
-const tex = new THREE.TextureLoader().load(`${base}Main/textures/displayFace.png`);
+//const tex = new THREE.TextureLoader().load(`${base}Main/textures/displayFace.png`);
 
 import { useInView } from 'react-intersection-observer';
 

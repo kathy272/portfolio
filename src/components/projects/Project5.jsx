@@ -1,10 +1,11 @@
 import React from 'react';
+const base = import.meta.env.BASE_URL;
 
 const Project5 = () => {
   return (
     <div className="max-w-9/10   bg-[#A06FE8]">
 
-      <img src="/MeetMe/top.svg" className="w-full pt-20  h-auto " alt="meetMe app design" />
+      <img src={`${base}MeetMe/top.svg`} className="w-full pt-20  h-auto " alt="meetMe app design" />
 
 
 
@@ -30,11 +31,11 @@ const Project5 = () => {
 
 </div>
        
-        <img src="/MeetMe/img3.png" className=" w-full sm:w-1/2 md:w-2/3 h-auto mx-auto pr-5 object-contain " alt="user flow meetme" />
+        <img src={`${base}MeetMe/img3.png`}  className=" w-full sm:w-1/2 md:w-2/3 h-auto mx-auto pr-5 object-contain " alt="user flow meetme" />
 
 
       </div>
-        <img src="/MeetMe/img1.png" className="max-w-full  mx-auto object-cover" alt="MeetMe apps" />
+        <img src={`${base}MeetMe/img1.png`}  className="max-w-full  mx-auto object-cover" alt="MeetMe apps" />
 
 
 

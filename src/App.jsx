@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
+//when in development, use basename="/" 
+//when in production, use basename="/portfolio"
 import{
   About, Contact, Experience, Hero, Navbar, Works, } from './components';
 
@@ -7,7 +8,7 @@ const App = () => {
     console.log("App component rendered");
   return (
 
-    <BrowserRouter>
+<BrowserRouter basename="/">
     <Routes>
       <Route path="/" element={
          <div className="relative z-0 bg-primary">

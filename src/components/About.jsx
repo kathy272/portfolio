@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from "../hoc";
+const base = import.meta.env.BASE_URL;
 
 
 
@@ -37,23 +38,25 @@ const AreaCard = ({ index, title }) => {
 const About = () => {
     return (
         <section id="about" className="pt-[150px] bg-about  bg-right  bg-cover bg-no-repeat">
-            <div className=" w-full h-full object-fit ">
+            <div className=" w-full h-full  object-fit ">
                 <div className="`${styles.padding} max-w-7xl mx-auto relative z-0`">
+                    <div className="mx-10 xl:mx-0">
                     <motion.div variants={{ textVariant: textVariant(0.1) }}>
 
                         <p className={styles.sectionSubText}>Introduction</p>
                         <h2 className={styles.sectionHeadText}>About Me</h2>
                     </motion.div>
-
+<div>         <img src={`${base}me_drawing.png`}  className="absolute w-[200px] md:w-[300px] h-auto mt-[-180px] sm:mt-[-200px] md:mt-[-280px] xl:mt-[-300px] end-5 " alt="drawing of me" />
+</div>
                     <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
-                        className="mt-4 text-secondary text-[17px] max-w-6xl leading-[30px]">
+                        className="mt-4  text-secondary text-[17px] pr-20 lg:pr-10 xl:pr-0 max-w-6xl leading-[30px]">
                         Born and raised in Salzburg, Austria, I’ve always been fascinated by design and technology. After finishing an academic high school program focused on linguistics, I moved to Vienna at 19 to travel the world as a flight attendant. Those adventures gave me a lot of inspiration and helped me build a rich visual library.
                         <br />
                         Eventually, I decided to study Creative Computing in Saint Pölten, where I got to dive deeper into combining design and storytelling with tech. I love blending creativity with technical skills to make immersive experiences, and I’m excited to find a creative space where I can keep exploring and making cool things happen! ;)
                     </motion.p>
                     
                     <h2 className="text-secondary font-black py-10 md:text-[40px] sm:text-[30px] xs:text-[20px] text-[20px]">Areas</h2>
-
+</div>
                     <div className=" flex flex-wrap gap-10 justify-evenly items-center ">
                         {areas.map((area, index) => (
                             <AreaCard key={area.title} index={index} {...area} />
@@ -99,4 +102,5 @@ const About = () => {
     )
 
 }
+
 export default About;

@@ -1,10 +1,11 @@
 import React from 'react';
+const base = import.meta.env.BASE_URL;
 
 const Project6 = () => {
   return (
     <div className="max-w-9/10  bg-[#10110F] ">
 
-      <img src="/Wunden/wunden_top.png" className="w-full h-auto " alt="cover design" />
+      <img src={`${base}Wunden/wunden_top.png`}  className="w-full h-auto " alt="cover design" />
 
 
   <div className='flex-col max-w-full py-10 px-10 sm:px-20 xl:px-40 sm:w-full'>
@@ -26,10 +27,10 @@ For this book, I created the cover and a series of illustrations highlighting ke
 
 
 
-      <img src="/Wunden/wunden_book.jpg" className=" w-full sm:w-1/2 md:w-2/3 py-10 h-auto mx-auto pr-5  " alt="the book" />
+      <img src={`${base}Wunden/wunden_book.jpg`}  className=" w-full sm:w-1/2 md:w-2/3 py-10 h-auto mx-auto pr-5  " alt="the book" />
 
 
-      <img src="/Wunden/illustrations.png" className="max-w-full py-10 px-5  mx-auto object-cover" alt="illustrations" />
+      <img src={`${base}Wunden/illustrations.png`}  className="max-w-full py-10 px-5  mx-auto object-cover" alt="illustrations" />
 
 
 

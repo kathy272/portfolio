@@ -1,5 +1,6 @@
 
 
+const base = import.meta.env.BASE_URL;
 
 
 export const navLinks = [
@@ -103,25 +104,25 @@ const projects = [
     tags: [
       {
         name: "Unity",
-        icon: "/icons/unity.svg"
+        icon: `${base}icons/unity.svg`
       },
       {
         name: "Blender",
-        icon: "/icons/blender.svg"
+        icon: `${base}icons/blender.svg`
 
       },
       {
         name: "Procreate",
-        icon: "/icons/procreate.svg"
+        icon: `${base}icons/procreate.svg`
 
       }, {
         name: "Jira",
-        icon: "/icons/jira.svg"
+        icon: `${base}icons/jira.svg`
 
       },
 
     ],
-    cover: "/TideUp/img00.png",
+    cover: `${base}TideUp/img00.png`,
   },
   {
     name: "AR Map Creator",
@@ -132,17 +133,17 @@ const projects = [
     tags: [
       {
         name: "Unity",
-        icon: "/icons/unity.svg"
+        icon: `${base}icons/unity.svg`
 
       },
       {
         name: "Figma",
-        icon: "/icons/figma.svg"
+        icon: `${base}icons/figma.svg`
 
       },
       
     ],
-    cover: "/ARMap/cover.png",
+    cover: `${base}ARMap/cover.png`,
 
   },
   {
@@ -155,17 +156,17 @@ const projects = [
     tags: [
       {
         name: "vvvv - Gamma",
-        icon: "/icons/vvvv.svg"
+        icon: `${base}icons/vvvv.svg`
 
       },
       {
         name: "Blender",
-        icon: "/icons/blender.svg"
+        icon: `${base}icons/blender.svg`
 
       },
     ],
 
-    cover: "/rte/rte.png",
+    cover: `${base}rte/rte.png`,
 
   },
   {
@@ -177,18 +178,18 @@ const projects = [
     tags: [
       {
         name: "Figma",
-        icon: "/icons/figma.svg"
+        icon: `${base}icons/figma.svg`
       },
       {
         name: "Kotlin",
-        icon: "/icons/kotlin.svg"
+        icon: `${base}icons/kotlin.svg`
       },
       {
         name: "Procreate",
-        icon: "/icons/procreate.svg"
+        icon: `${base}icons/procreate.svg`
       },
     ],
-    cover: "/ArcaneMind/img1.png",
+    cover: `${base}ArcaneMind/img1.png`,
   },
   {
     name: "MeetMe",
@@ -199,11 +200,11 @@ const projects = [
     tags: [
       {
         name: "Figma",
-        icon: "/icons/procreate.svg"
+        icon: `${base}icons/procreate.svg`
 
       },
     ],
-    cover: "/MeetMe/img1.png",
+    cover: `${base}MeetMe/img1.png`,
 
   },
   {
@@ -215,12 +216,12 @@ const projects = [
     tags: [
       {
         name: "Procreate",
-        icon: "/icons/procreate.svg"
+        icon: `${base}icons/procreate.svg`
 
       },
 
     ],
-    cover: "/Wunden/wunden_book.jpg",
+    cover: `${base}Wunden/wunden_book.jpg`,
   },
   {
     name: "Portfolio Website",
@@ -231,24 +232,24 @@ const projects = [
     tags: [
       {
         name: "Procreate",
-        icon: "/icons/procreate.svg"
+        icon: `${base}icons/procreate.svg`
 
       },
           {
         name: "Figma",
-        icon: "/icons/figma.svg"
+        icon: `${base}icons/figma.svg`
 
       },
       {
         name: "Git",
-        icon: "/icons/git.svg"
+        icon: `${base}icons/git.svg`
 
       },
      
 
 
     ],
-    cover: "/Portfolio/cover.jpg",
+    cover:  `${base}Portfolio/cover.jpg`,
   }
 
 ];

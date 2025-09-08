@@ -8,7 +8,7 @@ import { textVariant } from "../utils/motion";
 import { slideIn } from "../utils/motion";
 import BubbleCanvas from "./canvas/BubbleCanvas";
 import LinkedIn from "/icons/linkedIn.svg"
-
+const base = import.meta.env.BASE_URL;
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -142,7 +142,7 @@ const Contact = () => {
                     <div className="flex flex-col  w-full sm:w-1/2 py-10 " >
                     <p className=" text-right"> kendlbacherkatharina@gmail.com</p>
                         <p className="text-right ">Download my CV&nbsp;
-                            <a href="/Resume/CV_2025.pdf" download="Kendlbacher_CV.pdf" className="underline uppercase">
+                            <a href={`${base}Resume/CV_2025.pdf`} download="Kendlbacher_CV.pdf" className="underline uppercase">
                                 Here
                             </a>
                         </p>

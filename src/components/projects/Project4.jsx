@@ -1,10 +1,11 @@
 import React from 'react';
+const base = import.meta.env.BASE_URL;
 
 const Project4 = () => {
   return (
     <div className="max-w-9/10   bg-[#000000]">
 
-      <img src="/ArcaneMind/top.png" className="w-full pt-20  h-auto " alt="real time engine title" />
+      <img src={`${base}ArcaneMind/top.png`} className="w-full pt-20  h-auto " alt="real time engine title" />
 
 
 
@@ -40,13 +41,13 @@ the card designs from the Rider-Waite deck into the app.</p>
 
 
 
-        <img src="/ArcaneMind/divider.svg" className="max-w-1/4  w-1/2 mx-auto  object-cover" alt="divider" />
+        <img src={`${base}ArcaneMind/divider.svg`} className="max-w-1/4  w-1/2 mx-auto  object-cover" alt="divider" />
 
-        <img src="/ArcaneMind/am_banner.png" className="max-w-full mx-auto  object-cover" alt="Arcane Mind illustrations" />
+        <img src={`${base}ArcaneMind/am_banner.png`} className="max-w-full mx-auto  object-cover" alt="Arcane Mind illustrations" />
 
 
         
-        <img src="/ArcaneMind/img1.png" className="max-full max-w-full mx-auto  object-cover" alt="Arcane Mind apps" />
+        <img src={`${base}ArcaneMind/img1.png`} className="max-full max-w-full mx-auto  object-cover" alt="Arcane Mind apps" />
 
       </div>
 

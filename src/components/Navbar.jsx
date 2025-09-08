@@ -9,12 +9,14 @@ import menu from '../assets/menu.svg';
 import close from '../assets/close.svg';
 
 const Navbar = () => {
+      console.log("Nav component rendered");
+
     const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);
     return (
 
         <nav className={`${styles.paddingX}
-w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+                w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
         >
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <Link to="/"
