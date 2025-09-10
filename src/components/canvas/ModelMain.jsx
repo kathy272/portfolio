@@ -87,12 +87,12 @@ const model = useGLTF(`${base}Main/scene.gltf`);
             >
                 <primitive
                     object={model.scene}
-                    scale={isMobile ? 0.7 : 2}
-                    position={isMobile ? [-2.5, -1.5, -0.5] : [-5.0, -3.2, -6.7]} // position={isMobile ? [-2.5, -1.5,-0.5] : [-2.5,-2.5,-1.5]}
+                    scale={isMobile ? 0.9 : 2}
+                    position={isMobile ? [-2.5, -3.5, -0.5] : [-5.0, -3.2, -6.7]} // position={isMobile ? [-2.5, -1.5,-0.5] : [-2.5,-2.5,-1.5]}
                     rotation={[-0.01, -0.7, -0.1]}
                     castShadow
                     receiveShadow />
-                <Steam position={isMobile ? [-2.2, -1.0, -1.5] : [-4.0, -1.5, -9.2]} isMobile={isMobile} />
+                <Steam position={isMobile ? [-2.1, -2.5, -1.6] : [-4.0, -1.5, -9.2]} isMobile={isMobile} />
 
             </group>
         </mesh>
@@ -132,8 +132,8 @@ const ModelCanvas = () => {
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls ref={controlsRef} enableZoom={false} enablePan={false} maxPolarAngle={Math.PI / 2}
                     minPolarAngle={Math.PI / 2}
-                    autoRotate
                     autoRotateSpeed={0.2}
+                    autoRotate={true}
                     target={isMobile ? [-2.5, -1.5, -0.5] : [-4.0, 0.5, -6.7]}
                 />
                 <Model isMobile={isMobile} controlsRef={controlsRef} />

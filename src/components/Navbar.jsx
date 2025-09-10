@@ -9,7 +9,6 @@ import menu from '../assets/menu.svg';
 import close from '../assets/close.svg';
 
 const Navbar = () => {
-      console.log("Nav component rendered");
 
     const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);

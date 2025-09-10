@@ -21,7 +21,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
         "contact": "url('/src/assets/background_01.png')",
-        "about": "url('/src/assets/background_02.svg')",
+        "about": "url('/src/assets/bg_space.png')",
         "small": "url('/src/assets/bg_small.png')",
         "tideUp": "url('/TideUp/tideUp_background.png')",
         "rte1": "url('/rte/rte_textbg.png')",

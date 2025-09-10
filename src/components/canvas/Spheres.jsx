@@ -1,9 +1,7 @@
 import React, { useRef, useEffect, useMemo, use } from 'react';
 import * as THREE from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
-import { useMatcapTexture } from '@react-three/drei';
-import { useLoader } from '@react-three/fiber';
-import { TextureLoader } from 'three';
+
 const radii = [
     1.05,
     0.65,
@@ -206,9 +204,7 @@ const positions = [
     { x: 5.19, y: 0.93, z: 1.97 },
     { x: 4.06, y: 0.04, z: 1.79 }
 ];
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2(); //stores position of mouse
-const forces = new Map();
+
 const tempVector = new THREE.Vector3();
 
 export default function Spheres() {
@@ -240,14 +236,11 @@ export default function Spheres() {
     // Mouse movement → repulsion logic
     function onMouseMove(event) {
         const mouseVector = new THREE.Vector2();
-        // mouseVector.x = (event.clientX / window.innerWidth) * 2 - 1;
-        //mouseVector.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        
         const rect = gl.domElement.getBoundingClientRect(); // Get canvas position/size on screen
 
         mouseVector.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
         mouseVector.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-
-
         raycaster.setFromCamera(mouseVector, camera);
         if (!groupRef.current) return;
 
@@ -263,8 +256,6 @@ export default function Spheres() {
     }
 
     useEffect(() => {
-
-
         window.addEventListener('mousemove', onMouseMove);
         return () => window.removeEventListener('mousemove', onMouseMove);
     }, []);
@@ -286,7 +277,6 @@ export default function Spheres() {
                 sphere.uuid,
                 force.multiplyScalar(0.9)
             );
-
             // Return to original position slowly
             sphere.position.lerp(original, 0.02);
 
@@ -319,12 +309,6 @@ export default function Spheres() {
             }
         }
     });
-
-
-
-
-
-
     return (
         <group ref={groupRef}>
             {spheres.map(({ position, radius, key }) => (
@@ -335,14 +319,11 @@ export default function Spheres() {
                     castShadow
                     receiveShadow
                     userData={{ radius }}
-
                 >
                     <sphereGeometry args={[1, 64, 64]} />
                     <meshStandardMaterial color={'#69B8E4'}
                         emissive={'#69B8E4'}
                         emissiveIntensity={1}
-
-
                     />
                 </mesh>
             ))}
