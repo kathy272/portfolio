@@ -141,7 +141,7 @@ const projects = [
         icon: `${base}icons/figma.svg`
 
       },
-      
+
     ],
     cover: `${base}ARMap/cover.png`,
 
@@ -200,11 +200,11 @@ const projects = [
     tags: [
       {
         name: "Figma",
-        icon: `${base}icons/procreate.svg`
+        icon: `${base}icons/figma.svg`
 
       },
     ],
-    cover: `${base}MeetMe/img1.png`,
+    cover: `${base}MeetMe/cover.png`,
 
   },
   {
@@ -235,7 +235,7 @@ const projects = [
         icon: `${base}icons/procreate.svg`
 
       },
-          {
+      {
         name: "Figma",
         icon: `${base}icons/figma.svg`
 
@@ -245,12 +245,31 @@ const projects = [
         icon: `${base}icons/git.svg`
 
       },
-     
+
 
 
     ],
-    cover:  `${base}Portfolio/cover.jpg`,
-  }
+    cover: `${base}Portfolio/cover.png`,
+  },
+  {
+    name: "Chronicles",
+    id: "Chronicles",
+    sub: "A blog website ",
+    short: "Designing and prototyping a blog website.",
+    
+    tags: [
+      {
+        name: "Figma",
+        icon: `${base}icons/figma.svg`
+      },
+      {
+        name: "Git",
+        icon: `${base}icons/git.svg`
+      },
+    
+    ],
+    cover: `${base}Chronicles/cover2.png`,
+  },
 
 ];
 
