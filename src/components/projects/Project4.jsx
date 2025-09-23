@@ -3,51 +3,37 @@ const base = import.meta.env.BASE_URL;
 
 const Project4 = () => {
   return (
-    <div className="max-w-9/10   bg-[#000000]">
+    <div className="max-w-9/10 bg-[#EAEAEA]">
 
-      <img src={`${base}ArcaneMind/top.png`} className="w-full pt-20  h-auto " alt="real time engine title" />
 
 
 
 
       <div className='flex-col p-8'>
-   <div className='flex-col max-w-full py-10 px-10 sm:px-20 xl:px-40 sm:w-full'>
-        <h1 className="text-4xl font-black text-primary pb-[20px] uppercase">
-          Arcane Mind
-        </h1>
-        <p className="text-lg text-primary">
-        We started with brainstorming
-          sessions to determine the key features and functionalities that the app
-          should have.
-          Once we had a clear idea of what we wanted, we began the
-          development phase. My colleague and I utilized our programming skills
-          in Kotlin to create the app. We made sure that the app was user-
-          friendly and had a simple interface to ensure seamless navigation. <br/>
-          The API we used to fetch the cards also played a crucial role in
-ensuring that the app delivered accurate results. We also incorporated
-the card designs from the Rider-Waite deck into the app.</p>
+        <div className='flex-col max-w-5/6 py-5  px-10 xl:px-40 sm:w-full'>
+      <img src={`${base}ArcaneMind/cover.png`} className="max-w-5/6 mx-auto pb-10 sm:pt-20"  alt="real time engine title" />
 
-  
-
-        <h3 className="text-lg py-3 font-bold text-primary">
-          2024
-        </h3>
-        <h3 className="text-lg font-bold  text-primary">Mobile UI/UX and development</h3>
-    <h3 className="text-lg py-3  text-primary">
-          Kotlin
-        </h3>
-      </div>
+          <p className="text-lg xl:text-xl text-gray-700 2xl:px-10">
+            The Tarot Card App was developed as a collaborative project, starting with brainstorming sessions to define the app’s core features and functionality. Once the concept was clear, my colleague and I moved into development using Kotlin.
+          </p>
 
 
 
+          <h3 className="text-lg xl:text-xl py-3 font-bold text-gray-700 2xl:px-10">
+            2024
+          </h3>
+          <h3 className="text-lg xl:text-xl font-bold  text-gray-700 2xl:px-10">Mobile UI/UX and development</h3>
+          <h3 className="text-lg xl:text-xl py-3  text-gray-700 2xl:px-10">
+            Kotlin, Procreate, Figma
+          </h3>
 
-        <img src={`${base}ArcaneMind/divider.svg`} className="max-w-1/4  w-1/2 mx-auto  object-cover" alt="divider" />
-
-        <img src={`${base}ArcaneMind/am_banner.png`} className="max-w-full mx-auto  object-cover" alt="Arcane Mind illustrations" />
-
-
-        
-        <img src={`${base}ArcaneMind/img1.png`} className="max-full max-w-full mx-auto  object-cover" alt="Arcane Mind apps" />
+          <img src={`${base}ArcaneMind/img1.png`} className="max-w-5/6 mx-auto 2xl:px-10 py-10 " alt="Arcane Mind page preview" />
+          <p className="text-lg xl:text-xl text-gray-700 2xl:px-10">
+            We focused on creating a user-friendly interface with simple navigation to ensure a seamless experience. The app integrated an API to fetch cards and deliver accurate results, while also incorporating the Rider–Waite deck designs for authentic visuals.
+            This project combined thoughtful planning, collaborative development, and careful design choices to deliver an engaging and accessible mobile experience.
+          </p>
+          <img src={`${base}ArcaneMind/am_banner.png`} className="max-w-5/6 mx-auto pb-5 "  alt="Arcane Mind illustrations" />
+        </div>
 
       </div>
 

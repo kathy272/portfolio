@@ -24,7 +24,9 @@ const Project1 = ({}) => {
           2025
         </h3>
         <h3 className="text-lg font-bold  text-gray-700">GameDesign and asset creation</h3>
-
+ <h3 className="text-lg py-3  text-gray-700 2xl:px-10">
+            Blender, Unity, C#, Procreate, Jira
+          </h3>
       </div>
 
 
