@@ -14,15 +14,14 @@ const Project1 = ({ cardImageRef }) => {
         <p className="text-lg text-gray-700 2xl:px-16">          For this project, I challenged myself by exploring a new framework: React. By following tutorials and studying documentation, I combined my skills in 3D modeling and coding with the Three.js framework and Tailwind CSS to create this website. It’s very much a living project, made with passion and way too much coffee, that will keep growing and evolving, but it’s already a solid first chapter for my portfolio.
         </p>
 
-        <p className="text-lg text-gray-700 2xl:px-16">          My task was to bring the game idea to life by creating concept art, modelling and texturing various assets and create charming dialogue.
-        </p>
 
         <h3 className="text-lg py-3 font-bold text-gray-700 2xl:px-16">
           2025
         </h3>
-        <h3 className="text-lg font-bold  text-gray-700 2xl:px-16">  Website design and programming</h3>
+        <h3 className="text-lg font-bold  text-gray-700 2xl:px-16">  
+          Website design and programming</h3>
         <h3 className="text-lg py-3 text-gray-700 2xl:px-16">
-          React, Tailwind CSS, ThreeJS, HTML, Javascript
+          Figma, Procreate, React, ThreeJS, HTML, Tailwind CSS, Javascript
         </h3>
       </div>
 

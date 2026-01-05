@@ -1,3 +1,4 @@
+const base = import.meta.env.BASE_URL;
 const styles = {
   paddingX: "sm:px-16 px-6",
   paddingY: "sm:py-16 py-6",
@@ -15,5 +16,10 @@ const styles = {
   sectionSubText2:
     "sm:text-[16px] text-[14px] text-secondary uppercase tracking-wider",
 };
-
-export { styles };
+const bgStyle = {
+   backgroundImage: `url(${base}yellowstone.jpg)`,
+  backgroundPosition: "center top",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+};
+export { styles, bgStyle };

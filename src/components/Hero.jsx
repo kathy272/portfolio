@@ -1,31 +1,106 @@
 import React from "react";
 import { motion } from 'framer-motion';
 
-import { styles } from '../styles';
+import { bgStyle, styles } from '../styles';
 import ModelCanvas from "./canvas/ModelMain";
 const base = import.meta.env.BASE_URL;
 
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto ">
-      <div className={`${styles.paddingX} absolute inset-0 top-[150px] mx-auto flex-row max-w-7xl items-start gap-5`}>
-        <div className="flex flex-col justify-center items-center"></div>
+<section className="relative w-full min-h-screen pt-[70px]">
 
-        <div >
-          <h1 className={`${styles.heroHeadText} text-secondary `}>
+<div className="relative sm:mx-10 md:mx-20 mt-[50px] overflow-hidden">
+      <div className="bg-primary w-full absolute z-10" style={{
+      height: "clamp(4.5rem, 13vw, 11.5rem)",
+    }}></div>
 
-           <span className="text-[#797979]">Hey! </span> I'm Kathy</h1>
-          <p className={`${styles.heroSubText} mt-2 text-secondary-100`}>
-            I am a passionate Designer and
-            <br className='sm:block hidden' />
-            Front-End Developer looking<br className='sm:block hidden' />
-            to create creative digital experiences. 
+  <img src={`${base}yellowstone.jpg`} alt="Background" className="
+  w-full h-full object-cover z-10" />
+  <h1 className=" absolute font-black z-10 w-full 
+  top-[10px]
+  text-center
+  text-[60px]
+  sm:top-[33px]
+    md:top-[20px]
 
-          </p>
-        </div>
-      </div>
-      <ModelCanvas />
+  lg:top-[23px]
+  xl:top-[10px]
+      leading-none
+      tracking-tight
+      text-transparent
+      bg-clip-text
+      bg-no-repeat
+      select-none
+         [background-position:var(--bg-pos)]
+    sm:[background-position:50%_-33px]
+    md:[background-position:50%_-20px]
+        lg:[background-position:50%_-23px]
+
+  xl:[background-position:50%_-10px]"
+      style={{fontSize: "clamp(4.5rem, 13vw, 14rem)", backgroundImage: `url(${base}yellowstone.jpg)`,
+      backgroundSize: "cover",
+       }}>PORTFOLIO.</h1>
+</div>
+
+
+<div
+  className="
+    relative
+    flex
+    flex-col
+    sm:flex-row
+    items-start
+    justify-between
+    gap-6
+    px-6
+    md:px-[100px]
+    lg:px-20
+    xl:px-[150px]
+    text-secondary
+    sm:text-primary
+    bottom-[-50px]
+    sm:bottom-[200px]
+    sm:px-[50px]
+    2xl:bottom-[800px]
+    "
+>
+
+  {/* LEFT */}
+  <h1
+    className="
+      font-black
+      leading-none
+      sm:text-primary
+      sm:max-w-[60%]
+    "
+    style={{
+      fontSize: "clamp(2rem, 6vw, 9rem)",
+    }}
+  >
+    <span className="sm:text-primary">Hey! </span> <br className='xl:block hidden' />I'm Kathy
+  </h1>
+
+  {/* RIGHT */}
+  <p
+    className="
+      sm:text-right
+      font-bold
+      text-primary-100
+      sm:max-w-[40%]
+    "
+    style={{
+      fontSize: "clamp(1rem, 2.5vw, 2rem)",
+    }}
+  >
+    I am a passionate Designer and Front-End Developer looking
+    <br />
+    to create creative digital experiences.
+  </p>
+
+</div>
+      
+
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[37px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">

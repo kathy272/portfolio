@@ -8,19 +8,20 @@ const Project5 = () => {
 
         <img src={`${base}MeetMe/top.png`} className="w-full pb-10  h-auto " alt="meetMe app design" />
 
-        <p className="text-lg text-gray-700 2xl:px-16">
+        <p className="text-lg xl:text-xl  text-gray-700 2xl:px-16">
           MeetMe is a social app prototype I created in Figma that helps people connect through shared interests and hobbies. The app enables users to create and join groups, chat with others, and organize meetups.
         </p>
 
-        <h3 className="text-lg py-3 font-bold text-gray-700 2xl:px-16">
+        <h3 className="text-lg xl:text-xl  py-3 font-bold text-gray-700 2xl:px-16">
           2023
         </h3>
-        <h3 className="text-lg font-bold text-gray-700 2xl:px-16">UI/UX Design</h3>
-
+        <h3 className="text-lg xl:text-xl  font-bold text-gray-700 2xl:px-16">UI/UX Design</h3>
+        <h3 className="text-lg xl:text-xl py-3 text-gray-700 2xl:px-16">
+          Figma      </h3>
         <img src={`${base}MeetMe/img2.png`} className="max-w-full  mx-auto object-cover" alt="MeetMe apps" />
-        <p className="text-lg text-gray-700 2xl:px-16">
-          Features include:
-          <ul className="list-disc list-inside py-3 2xl:px-16">
+        <p className="text-lg xl:text-xl  text-gray-700 2xl:px-16">
+          Features include:</p>
+          <ul className="list-disc text-lg xl:text-xl  text-gray-700  list-inside py-3 2xl:px-16">
             <li>User flow for onboarding and navigation</li>
             <li>High-fidelity prototype for testing user interactions</li>
             <li>Event management (create, join, and save events)</li>
@@ -28,17 +29,13 @@ const Project5 = () => {
             <li>Chat functionality to enable easy communication between participants</li>
           </ul>
 
-        </p>
-         <p className="text-lg text-gray-700 pb-10 2xl:px-16">
+        
+        <p className="text-lg xl:text-xl text-gray-700 pb-10 2xl:px-16">
           This project focused on designing a smooth user journey and intuitive interface to encourage meaningful social interactions.
         </p>
         <img src={`${base}MeetMe/img1.png`} className="max-w-full  mx-auto object-cover" alt="MeetMe apps" />
 
       </div>
-
-
-
-
     </div>
   );
 };

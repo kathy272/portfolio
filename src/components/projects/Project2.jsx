@@ -27,11 +27,11 @@ const Project2 = () => {
           </h3>
           <h3 className="text-lg xl:text-xl font-bold  text-gray-700">Ar development, API integration, real-time map creation</h3>
           <h3 className="text-lg xl:text-xl py-3  text-gray-700">
-            Unity, C#, Stable Diffusion API, Shader Graphs, Python, Figma, Websocket
+            Unity, C#, Shader Graphs, Stable Diffusion API, NDI, Websocket, Figma
           </h3>
         
 
-        <img src={`${base}ARMap/img4.png`} className="max-w-4xl max-w-full mx-auto pb-10 object-cover" alt="ar map version 1" />
+        <img src={`${base}ARMap/img4.png`} className="max-w-4xl max-w-full mx-auto py-10 object-cover" alt="ar map version 1" />
         <p className="text-lg xl:text-xl text-gray-700 2xl:px-10">
           The project focused on creating an interactive storytelling experience through real-time image generation and a Canvas-to-Oculus drawing pipeline. Key features included:          </p>
         <ul className="text-lg xl:text-xl list-disc list-inside text-gray-700 py-3 2xl:px-10">

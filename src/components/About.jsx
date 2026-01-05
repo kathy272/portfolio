@@ -37,7 +37,7 @@ const AreaCard = ({ index, title }) => {
 };
 const About = () => {
     return (
-        <section id="about" className="pt-[170px] bg-about bg-top-[20px] bg-size-[200px] bg-no-repeat">
+        <section id="about" className="pt-[170px]  bg-about bg-top-[20px] bg-size-[200px] bg-no-repeat">
             <div className=" w-full h-full  object-fit ">
                 <div className="`${styles.padding} max-w-7xl mx-auto relative z-0`">
                     <div className="mx-10 xl:mx-0">

@@ -136,11 +136,15 @@ const projects = [
         icon: `${base}icons/unity.svg`
 
       },
-      {
-        name: "Figma",
-        icon: `${base}icons/figma.svg`
 
+      {
+        name: "C#",
       },
+
+      {
+        name: "WebSocket",
+      }
+
 
     ],
     cover: `${base}ARMap/cover.png`,
@@ -160,9 +164,7 @@ const projects = [
 
       },
       {
-        name: "Blender",
-        icon: `${base}icons/blender.svg`
-
+        name: "C#",
       },
     ],
 
@@ -230,21 +232,32 @@ const projects = [
     short: "This portfolio website was built with React, ThreeJS and TailwindCSS.",
 
     tags: [
-      {
-        name: "Procreate",
-        icon: `${base}icons/procreate.svg`
 
-      },
+
       {
         name: "Figma",
         icon: `${base}icons/figma.svg`
 
       },
       {
-        name: "Git",
-        icon: `${base}icons/git.svg`
-
+        name: "Procreate",
       },
+      {
+        name: "React",
+      },
+      {
+        name: "ThreeJS",
+      },
+      {
+        name: "HTML",
+      },
+       {
+        name: "TailwindCSS",
+      },
+      {
+        name: "JavaScript",
+      }
+     
 
 
 
@@ -256,17 +269,26 @@ const projects = [
     id: "Chronicles",
     sub: "A blog website ",
     short: "Designing and prototyping a blog website.",
-    
+
     tags: [
       {
         name: "Figma",
-        icon: `${base}icons/figma.svg`
       },
       {
-        name: "Git",
-        icon: `${base}icons/git.svg`
+        name: "HTML",
       },
-    
+      {
+        name: "JavaScript",
+      },
+      {
+        name: "C#",
+      },
+      {
+        name: "SQL",
+      },
+      { name: "VADER",
+      }
+
     ],
     cover: `${base}Chronicles/cover2.png`,
   },
