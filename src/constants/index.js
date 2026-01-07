@@ -262,7 +262,7 @@ const projects = [
 
 
     ],
-    cover: `${base}Portfolio/cover.png`,
+    cover: `${base}Portfolio/project7.png`,
   },
   {
     name: "Chronicles",

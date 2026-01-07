@@ -6,7 +6,7 @@ const Project1 = ({ cardImageRef }) => {
 
   return (
     <div className="max-w-9/10 bg-[#F9F3EF]">
-      <img ref={cardImageRef} src={`${base}Portfolio/cover.png`} className="max-w-4xl max-w-full mx-auto pb-5 sm:pt-20" alt="you are here image" />
+      <img ref={cardImageRef} src={`${base}Portfolio/project7.png`} className="max-w-4xl max-w-full mx-auto pb-5 sm:pt-20" alt="you are here image" />
       <div className='flex-col max-w-full py-10 px-10 sm:px-20 xl:px-40 sm:w-full'>
         <h1 className="text-4xl font-black text-gray-700 pb-[20px] uppercase 2xl:px-16">
           Portfolio Website

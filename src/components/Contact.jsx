@@ -134,17 +134,14 @@ const Contact = () => {
                     <BubbleCanvas />
 
                 </motion.div>
-
-
             </div>
-
             <div className="flex flex-col">
                 <div className=" flex flex-col md:flex-row px-[5px]  md:px-[100px] xl:px-[160px] w-full justify-between ">
                     <h1 className="sm:text-[32px] hidden sm:block pt-10 sm:py-10 text-[24px] uppercase tracking-widest">Portfolio</h1>
                     <div className="flex flex-col  w-full sm:w-1/2 py-10 " >
                         <p className=" text-right"> kendlbacherkatharina@gmail.com</p>
                         <p className="text-right ">Download my CV&nbsp;
-                            <a href={`${base}Resume/CV_2025.pdf`} download="Kendlbacher_CV.pdf" className="underline uppercase">
+                            <a href={`${base}Resume/Kendlbacher_resume_2026.pdf`} download="Kendlbacher_CV.pdf" className="underline uppercase">
                                 Here
                             </a>
                         </p>
@@ -153,15 +150,11 @@ const Contact = () => {
                         </a>
                     </div>
 
-
-
                 </div>
                 <hr className="opacity-50  w-5/6 self-center"></hr>
                 <p className="text-right self-center py-10 text-white opacity-50 font-medium lg:text-[20px] sm:text-[16px] text-[16px] lg:leading-[40px]">
                     © 2025 Kendlbacher. All rights reserved.
                 </p>
-
-
             </div>
         </div>
     );

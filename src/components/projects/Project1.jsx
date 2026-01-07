@@ -11,20 +11,20 @@ const Project1 = ({}) => {
         <h1 className="text-4xl font-black text-gray-700 pb-[20px] uppercase">
           TideUp
         </h1>
-        <p className="text-lg text-gray-700">
+         <p className="text-lg xl:text-xl text-gray-700">
           TideUp is a cozy 3D game about Re- and Upcycling trash on an island to bring change.
           The player takes on the role of a traveler who gets washed onto the beach and decides to clean up the island to help the environment and the islanders!
         </p>
 
-        <p className="text-lg text-gray-700">
+        <p className="text-lg xl:text-xl text-gray-700">
           My task was to bring the game idea to life by creating concept art, modelling and texturing various assets and create charming dialogue.
         </p>
 
-        <h3 className="text-lg py-3 font-bold text-gray-700">
+          <h3 className="text-lg xl:text-xl py-3 font-bold text-gray-700">
           2025
         </h3>
-        <h3 className="text-lg font-bold  text-gray-700">GameDesign and asset creation</h3>
- <h3 className="text-lg py-3  text-gray-700 2xl:px-10">
+        <h3 className="text-lg xl:text-xl font-bold  text-gray-700">GameDesign and asset creation</h3>
+          <h3 className="text-lg xl:text-xl py-3  text-gray-700">
             Blender, Unity, C#, Procreate, Jira
           </h3>
       </div>
