@@ -9,13 +9,13 @@ import Project8 from "../components/projects/Project8";
 
 
 export const projectComponents = {
-  "TideUp": Project1,
-  "AR Map Creator": Project2,
-  "Real-Time Engine": Project3,
-  "Arcane Mind": Project4,
-  "MeetMe": Project5,
-    "Wunden (er)zählen": Project6,
-    "Portfolio Website": Project7,
-    "Chronicles": Project8,
+tideup: Project1,
+"ar-map": Project2,
+"real-time-engine": Project3,
+"arcane-mind": Project4,
+"meet-me": Project5,
+wunden: Project6,
+"portfolio-website": Project7,
+chronicles: Project8,
 
 };

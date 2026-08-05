@@ -11,11 +11,10 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#363636", color: "white" }}
-      contentArrowStyle={{ borderRight: "7px solid  white" }}
+      contentStyle={{ background: "#363636", color: "black" }}
+      contentArrowStyle={{ borderRight: "7px solid  black" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-    >
+     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p className="text-white text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
@@ -31,24 +30,18 @@ const ExperienceCard = ({ experience }) => {
     </VerticalTimelineElement>
   );
 };
-// Component to display work experience in a vertical timeline format
+// Component to display work experience in a vertical timeline 
 const Experience = () => {
   return (
-    <section className="bg-secondary">
-      <motion.div className={`${styles.padding} max-w-7xl mx-auto relative`}
-        variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-left text-white`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-left text-white`}>
-          Work Experience
-        </h2>
-      </motion.div>
+    <section className="py-10 sm:py-16 lg:py-24 max-w-[90vw] mx-auto">
+       <motion.div variants={textVariant()} className=" ">
+             <h2 className=" text-secondary font-light uppercase md:text-[70px] sm:text-[60px] xs:text-[50px] leading-tight text-[30px]">Experience:</h2>
+           </motion.div>
 
       <div className='flex flex-col '>
         <VerticalTimeline
           className="mt-10"
-          lineColor="white"
+          lineColor="#363636"
         >
           {experiences.map((experience, index) => (
             <ExperienceCard

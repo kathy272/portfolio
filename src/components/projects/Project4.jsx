@@ -3,36 +3,40 @@ const base = import.meta.env.BASE_URL;
 
 const Project4 = () => {
   return (
-    <div className="max-w-9/10 bg-[#EAEAEA]">
-      <div className='flex-col p-8'>
-        <div className='flex-col max-w-5/6 py-5  px-10 xl:px-40 sm:w-full'>
-          <img src={`${base}ArcaneMind/cover.png`} className="max-w-5/6 mx-auto pb-10 sm:pt-20" alt="real time engine title" />
+    <section className="max-w-[90vw] mx-auto pt-[50px]">
 
-          <p className="text-lg xl:text-xl text-gray-700 2xl:px-10">
-            The Tarot Card App was developed as a collaborative project, starting with brainstorming sessions to define the app’s core features and functionality. Once the concept was clear, my colleague and I moved into development using Kotlin.
-          </p>
-          <h3 className="text-lg xl:text-xl py-3 font-bold text-gray-700 2xl:px-10">
-            2024
-          </h3>
-          <h3 className="text-lg xl:text-xl font-bold  text-gray-700 2xl:px-10">Mobile UI/UX and development</h3>
-          <h3 className="text-lg xl:text-xl py-3  text-gray-700 2xl:px-10">
-           Figma, Kotlin, Procreate
-          </h3>
+      <img src={`${base}ArcaneMind/cover_arcaneMind.png`} className="w-full mx-auto pb-5" alt="real time engine title" />
 
-          <img src={`${base}ArcaneMind/img1.png`} className="max-w-5/6 mx-auto 2xl:px-10 py-10 " alt="Arcane Mind page preview" />
-          <p className="text-lg xl:text-xl text-gray-700 2xl:px-10">
-            We focused on creating a user-friendly interface with simple navigation to ensure a seamless experience. The app integrated an API to fetch cards and deliver accurate results, while also incorporating the Rider–Waite deck designs for authentic visuals.
-            This project combined thoughtful planning, collaborative development, and careful design choices to deliver an engaging and accessible mobile experience.
-          </p>
-          <img src={`${base}ArcaneMind/am_banner.png`} className="max-w-5/6 mx-auto pb-5 " alt="Arcane Mind illustrations" />
+      <div className="py-10">
+        <h2 className=" text-secondary font-light uppercase md:text-[30px] sm:text-[25px] xs:text-[20px] text-[20px]">
+          Real-time AR Map rendering
+        </h2>
+   <div className="flex flex-col lg:flex-row gap-10  xl:gap-40">   
+          <div className="lg:w-2/3">
+            <p className="text-lg xl:text-xl pt-5 text-gray-700">
+              The Tarot Card App was developed as a collaborative project, starting with brainstorming sessions to define the app’s core features and functionality. Once the concept was clear, my colleague and I moved into development using Kotlin.
+              <br /> <br /> We focused on creating a user-friendly interface with simple navigation to ensure a seamless experience. The app integrated an API to fetch cards and deliver accurate results, while also incorporating the Rider–Waite deck designs for authentic visuals.
+              This project combined thoughtful planning, collaborative development, and careful design choices to deliver an engaging and accessible mobile experience.
+            </p>
+
+          </div>
+          <div className="lg:w-1/3">
+            <h3 className="text-lg xl:text-xl font-bold  text-gray-700 2xl:px-10">
+              UI/UX and Mobile Development</h3>
+            <h3 className="text-lg xl:text-xl  py-3  text-gray-700 2xl:px-10">
+              Figma, Kotlin, Procreate</h3>
+            <h3 className="text-lg xl:text-xl font-bold text-gray-700 2xl:px-10">
+              2024</h3>
+          </div>
         </div>
-
       </div>
+        <div className='flex flex-row gap-[6vw] py-[4vw]'>
+         <img src={`${base}ArcaneMind/Single_arcaneMind.png`}  className="w-[42vw]  pb-10 mx-auto" alt="MeetMe apps" />
+         <img src={`${base}ArcaneMind/overview_arcaneMind.png`}   className="w-[42vw] pb-10 mx-auto" alt="MeetMe apps" />
+      </div>
+      <img src={`${base}ArcaneMind/am_banner.png`} className="w-full relative top-[-100px] lg:top-[-180px] mx-auto " alt="Arcane Mind illustrations" />
 
-
-
-
-    </div>
+    </section>
   );
 };
 

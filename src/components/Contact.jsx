@@ -7,10 +7,13 @@ import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { slideIn } from "../utils/motion";
 import BubbleCanvas from "./canvas/BubbleCanvas";
+import ModelCanvas from "./canvas/ModelMain";
 import LinkedIn from "/icons/linkedIn.svg"
 const base = import.meta.env.BASE_URL;
 
 const Contact = () => {
+    const isAboutPage = window.location.pathname === "/about";
+    const isHomePage = window.location.pathname === "/";
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -73,10 +76,16 @@ const Contact = () => {
                     variants={slideIn("left", "tween", 0.2, 1)}
                     className="flex-1 sm:pl-16 px-6 w-full lg:w-2/5 xl:w-1/2 sm:py-10 py-15"
                 >
-                    <img src={`${base}me_drawing_2.png`} className="absolute w-[220px] sm:w-[300px] lg:w-[400px] 2xl:w-[500px] h-auto mt-[-150px] sm:mt-[-200px] lg:mt-[410px]  xl:mt-[410px]  z-10 sm:end-5 end-[0px] lg:end-[220px] xl:end-[260px] 2xl:end-[210px]" alt="drawing of me" />
+                    {isHomePage && (
+                        <img
+                            src={`${base}illustration_me.png`}
+                            className="absolute w-[220px] sm:w-[300px] lg:w-[400px] 2xl:w-[500px] h-auto mt-[-150px] sm:mt-[-200px] lg:mt-[410px] xl:mt-[320px] z-10 sm:end-5 end-[0px] lg:end-[240px] 2xl:end-[280px]"
+                            alt="Drawing of me"
+                        />
+                    )}
 
-                    <p className="sm:text-[18px] text-[14px] text-teritary uppercase tracking-wider xl:pt-[100px]">Wanna say hi?</p>
-                    <h3 className="text-teritary font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact <span className="text-[#69B8E4]">Me!</span></h3>
+
+                    <h2 className=" text-teritary font-light uppercase md:text-[70px] pt-10 sm:text-[60px] xs:text-[50px] leading-tight text-[30px]">Let's <span className="text-[#69B8E4]">Talk!</span></h2>
 
                     <form
                         ref={formRef}
@@ -131,8 +140,7 @@ const Contact = () => {
                     variants={slideIn("right", "tween", 0.2, 1
                     )}
                     className="md.flex-1  w-full h-[500px] sm:h-[700px] lg:w-1/2 lg:h-[600px] xl:w-2/5 xl:h-[800px] xl:mt-[-150px] xl:pt-[400px] xl:pt-[200px] 2xl:h-[1000px] xl:h-[650px] 2xl:w-1/2 pt-[150px]">
-                    <BubbleCanvas />
-
+                    {!isHomePage ? <ModelCanvas /> : <BubbleCanvas />}
                 </motion.div>
             </div>
             <div className="flex flex-col">
@@ -140,11 +148,7 @@ const Contact = () => {
                     <h1 className="sm:text-[32px] hidden sm:block pt-10 sm:py-10 text-[24px] uppercase tracking-widest">Portfolio</h1>
                     <div className="flex flex-col  w-full sm:w-1/2 py-10 " >
                         <p className=" text-right"> kendlbacherkatharina@gmail.com</p>
-                        <p className="text-right ">Download my CV&nbsp;
-                            <a href={`${base}Resume/Kendlbacher_resume_2026.pdf`} download="Kendlbacher_CV.pdf" className="underline uppercase">
-                                Here
-                            </a>
-                        </p>
+
                         <a href="https://www.linkedin.com/in/katharina-kendlbacher-10a3212b1" className="underline pt-1  w-full ">
                             <img src={LinkedIn} alt="linkedIn" className="w-5 h-auto ms-auto" />
                         </a>
@@ -153,7 +157,7 @@ const Contact = () => {
                 </div>
                 <hr className="opacity-50  w-5/6 self-center"></hr>
                 <p className="text-right self-center py-10 text-white opacity-50 font-medium lg:text-[20px] sm:text-[16px] text-[16px] lg:leading-[40px]">
-                    © 2025 Kendlbacher. All rights reserved.
+                    © 2026 Kendlbacher. All rights reserved.
                 </p>
             </div>
         </div>

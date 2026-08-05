@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-
-
 import { styles } from '../styles';
-import { navLinks } from '../constants';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo_new.svg';
 import menu from '../assets/menu.svg';
 import close from '../assets/close.svg';
 
@@ -14,10 +11,9 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     return (
 
-        <nav className={`${styles.paddingX}
-                w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+        <nav className="w-full flex items-center py-5 fixed top-0 z-20 bg-primary"
         >
-            <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+            <div className="w-full max-w-[90vw]  flex justify-between items-center w-full mx-auto border-b ">
                 <Link to="/"
                     className="flex items-center gap-2"
                     onClick={() => {
@@ -25,25 +21,30 @@ const Navbar = () => {
                         window.scrollTo(0, 0);
                     }}>
 
-                    <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-                    <p className="text-secondary text-[18px] font-bold cursor-pointer flex">
-                        Katharina &nbsp;
-                        <span className="sm:block hidden"> | UI/UX | Front-end | Illustration </span></p>
+                    <img src={logo} alt="logo" className="w-12 object-contain" />
+
                 </Link>
 
 
 
-                <ul className="list-none hidden sm:flex flex:row gap-10">
-                    {navLinks.map((link) => (
-                        <li key={link.id} className={`${active === link.title
-                            ? "text-secondary"
-                            : "text-secondary"
-                            } hover:text-2B2B29 text-[18px] font-medium cursor-pointer`}>
-                            <a href={`#${link.id}`}>
-                                {link.title}
-                            </a>
-                        </li>
-                    ))}
+                <ul className="hidden gap-10 sm:flex">
+                    <li>
+                        <Link to="/about" className="text-[18px] font-light text-secondary">
+                            About
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="/#work" className="text-[18px] font-light text-secondary">
+                            Work
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="/#contact" className="text-[18px] font-light text-secondary">
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img
@@ -52,26 +53,25 @@ const Navbar = () => {
                         className="w-[28px] h-[28px] object-contain cursor-pointer"
                         onClick={() => setToggle(!toggle)}
                     />
-                    <div className={`${!toggle ? 'hidden' : 'flex'} 
-p-6 black-gradient absolute top-20 
-right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-                        <ul className="list-none flex justify-end items-start flex-col gap-4">
-                            {navLinks.map((link) => (
-                                <li key={link.id} className={`${active === link.title
-                                    ? "text-white"
-                                    : "text-white"
-                                    } hover:text-primary text-[16px] font-poppins  font-medium cursor-pointer`}
-                                    onClick={() => {
-                                        setToggle(!toggle);
-                                        setActive(link.title);
-                                    }}
-                                >
-                                    <a href={`#${link.id}`}>
+                    <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+                        <ul className="flex list-none flex-col items-start gap-4">
+                            <li>
+                                <Link to="/#about" onClick={() => setToggle(false)}>
+                                    About
+                                </Link>
+                            </li>
 
-                                        {link.title}
-                                    </a>
-                                </li>
-                            ))}
+                            <li>
+                                <Link to="/#work" onClick={() => setToggle(false)}>
+                                    Work
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="/#contact" onClick={() => setToggle(false)}>
+                                    Contact
+                                </Link>
+                            </li>
                         </ul>
 
                     </div>

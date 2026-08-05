@@ -2,22 +2,6 @@
 
 const base = import.meta.env.BASE_URL;
 
-
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
-
 const areas = [
 
   {
@@ -59,6 +43,15 @@ const areas = [
 
 
 const experiences = [
+  {
+title: "Designer & Marketing Assistant",
+company_name: "Freelance",
+date: "2025 - Present",
+points: [
+  "Creating a complete brand identity for a podcast, including logo design, social media graphics, and promotional materials.",
+  "Designing and illustrating a book cover and interior illustrations for a book, ensuring that the visual elements align with the narrative and theme of the story, as well as desining an album cover.",
+]
+  },
 
   {
     title: "Research Intern & Traveling Scholar",
@@ -96,201 +89,103 @@ const experiences = [
 
 const projects = [
   {
+    slug: "tideup",
     name: "TideUp",
-    id: "TideUp",
+  
     sub: "A serious game about recycling",
     short: "Designing and modelling various 3D Models in Blender for TideUp.",
 
-    tags: [
-      {
-        name: "Unity",
-        icon: `${base}icons/unity.svg`
-      },
-      {
-        name: "Blender",
-        icon: `${base}icons/blender.svg`
-
-      },
-      {
-        name: "Procreate",
-        icon: `${base}icons/procreate.svg`
-
-      }, {
-        name: "Jira",
-        icon: `${base}icons/jira.svg`
-
-      },
-
-    ],
-    cover: `${base}TideUp/img00.png`,
+    tags: ["3D"],
+    cover: `${base}TideUp/cover_TideUp.png`,
   },
   {
+    slug: "ar-map",
     name: "AR Map Creator",
-    id: "ARMap",
+    
     sub: " Real Time Map Rendering",
     short: "In the ACME Lab in CU Boulder, I had the opportunity to create a dynamic AR application.",
 
-    tags: [
-      {
-        name: "Unity",
-        icon: `${base}icons/unity.svg`
-
-      },
-
-      {
-        name: "C#",
-      },
-
-      {
-        name: "WebSocket",
-      }
-
-
+    tags: [ "Creative Coding"
     ],
-    cover: `${base}ARMap/cover.png`,
+    cover: `${base}ARMap/cover_Armap.png`,
 
   },
   {
+    slug: "real-time-engine",
     name: "Real-Time Engine",
-    id: "RTE",
+    
     sub: "Live Visuals",
     short: "Creating a visual live programming environment for the 69 x 4.5 m display at the House of Digitalization in Tulln.",
 
 
     tags: [
-      {
-        name: "vvvv - Gamma",
-        icon: `${base}icons/vvvv.svg`
-
-      },
-      {
-        name: "C#",
-      },
+    "Creative Coding"
     ],
 
-    cover: `${base}rte/rte.png`,
+    cover: `${base}rte/cover_Rte.png`,
 
   },
   {
+    slug: "arcane-mind",
     name: "Arcane Mind",
-    id: "ArcaneMind",
+   
     sub: "A Tarot Card Reading App",
     short: "A Tarot Card Reading App that I created in collaboration with a colleague.",
 
     tags: [
-      {
-        name: "Figma",
-        icon: `${base}icons/figma.svg`
-      },
-      {
-        name: "Kotlin",
-        icon: `${base}icons/kotlin.svg`
-      },
-      {
-        name: "Procreate",
-        icon: `${base}icons/procreate.svg`
-      },
+    "UI/UX", "Illustration", "Mobile"
     ],
-    cover: `${base}ArcaneMind/img1.png`,
+    cover: `${base}ArcaneMind/cover_arcaneMind.png`,
   },
   {
+    slug: "meet-me",
     name: "MeetMe",
-    id: "MeetMe",
+   
     sub: "A Meet-Up App in Figma",
     short: "Design project for an event app for like-minded people.",
 
     tags: [
-      {
-        name: "Figma",
-        icon: `${base}icons/figma.svg`
-
-      },
+    "UI/UX", "Mobile"
     ],
-    cover: `${base}MeetMe/cover.png`,
+    cover: `${base}MeetMe/cover_MeetMe.png`,
 
   },
   {
+    slug: "wunden",
     name: "Wunden (er)zählen",
-    id: "Wunden",
+   
     sub: "Cover and Illustrations for a Book",
     short: "Designing 15+ Illustrations and Cover Art which are closely tied to the narrative.",
 
     tags: [
-      {
-        name: "Procreate",
-        icon: `${base}icons/procreate.svg`
-
-      },
+      "Illustration"
 
     ],
-    cover: `${base}Wunden/wunden_book.jpg`,
+    cover: `${base}Wunden/cover_Wunden.png`,
   },
   {
+    slug: "portfolio-website",
     name: "Portfolio Website",
-    id: "portfolio",
+  
     sub: "Website design and programming",
     short: "This portfolio website was built with React, ThreeJS and TailwindCSS.",
 
     tags: [
-
-
-      {
-        name: "Figma",
-        icon: `${base}icons/figma.svg`
-
-      },
-      {
-        name: "Procreate",
-      },
-      {
-        name: "React",
-      },
-      {
-        name: "ThreeJS",
-      },
-      {
-        name: "HTML",
-      },
-       {
-        name: "TailwindCSS",
-      },
-      {
-        name: "JavaScript",
-      }
-     
-
-
-
+      "Web","UI/UX",
     ],
     cover: `${base}Portfolio/project7.png`,
   },
   {
+    slug: "chronicles",
     name: "Chronicles",
-    id: "Chronicles",
     sub: "A blog website ",
     short: "Designing and prototyping a blog website.",
 
     tags: [
-      {
-        name: "Figma",
-      },
-      {
-        name: "HTML",
-      },
-      {
-        name: "JavaScript",
-      },
-      {
-        name: "C#",
-      },
-      {
-        name: "SQL",
-      },
-      { name: "VADER",
-      }
+      "UI/UX", "Web"
 
     ],
-    cover: `${base}Chronicles/cover2.png`,
+    cover: `${base}Chronicles/landingpage_blog.png`,
   },
 
 ];

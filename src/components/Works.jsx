@@ -1,5 +1,4 @@
 import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn } from "../utils/motion";
@@ -7,82 +6,81 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { textVariant } from "../utils/motion";
 import { Link } from "react-router-dom";
-import ProjectModal from "./ProjectModal";
 import { useState } from "react";
 
 
-const WorksCard = ({ index, name, sub, short, cover, tags, onClick }) => {
+
+const WorksCard = ({ index,   slug, name, sub, short, cover, }) => {
   return (
     // <Link to={`/projects/${name}`} className="group">
-    <div onClick={onClick} className="group cursor-pointer">
-
-      <Tilt
-        className="xs:w-[300px] w-full"
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-      >
-        <motion.div
-          variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-          className="w-full  p-[1px] "
-        >
-          <div className='mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag) => (
-              <p key={`${name}-${tag.name}`} className={`text-[14px] text-secondary `}>
-                [{tag.name}]
-              </p>
-            ))}
-          </div>
-          <div className=" rounded-[20px] py-4 px-0 min-h-[280px] flex justify-evenly items-center flex-col">
-            <img
-              src={cover}
-              alt={name}
-              className="w-full h-[300px] object-cover "
-            />
-            <h3 className="text-secondary text-[20px]  py-5 font-bold text-left uppercase">{name}: {sub}</h3>
-            <p className="text-secondary text-[16px] text-start">{short}</p>
-
+<Link to={`/projects/${slug}`} className="group block">
+      <div className="w-full py-4">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="w-full">
+         <div className="relative overflow-hidden">
+          <img src={cover} alt={name} className="w-full aspect-[4/3]  hover:scale-105 transition-transform duration-300 ease-in-out" />
+          <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <h3 className="text-secondary text-[22px] w-full pt-5 font-light text-left ">{name}: {sub}</h3>
           </div>
         </motion.div>
-      </Tilt>
-    </div>
+      </div>
+    </Link>
 
   );
 };
 const Works = () => {
-  const [activeProject, setActiveProject] = React.useState(null);
+  const [selectedTag, setSelectedTag] = useState("All");
+
+  const tags = [...new Set(projects.flatMap(p => p.tags))].sort();
+
+  const allTags = ["All", ...tags];
+
+  const filteredProjects =
+    selectedTag === "All"
+      ? projects
+      : projects.filter(project =>
+        project.tags.includes(selectedTag)
+      );
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-left text-secondary`}>
-          My Work
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-left text-secondary`}>
-          Latest Projects
-        </h2>
+      <motion.div variants={textVariant()} className="max-w-[90vw] ">
+        <h2 className=" text-secondary font-light uppercase md:text-[70px] sm:text-[60px] xs:text-[50px] leading-tight text-[30px]">My Work</h2>
       </motion.div>
 
       <motion.p variants={fadeIn("up", "spring", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-6xl  leading-[30px] text-left">
+        className="text-secondary text-[17px] py-5 leading-[30px] text-left">
         Here are some of my projects that showcase my skills in UI/UX design, front-end
         development, and illustration. Each project reflects my passion for creating engaging and user-friendly digital experiences.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
-        {projects.map((project, index) => (
-          <WorksCard key={project.name} index={index} {...project}
-            onClick={() => setActiveProject(project)}
+
+      <motion.div layout className="flex flex-wrap pb-5 gap-4 ">
+        {allTags.map(tag => (
+          <button
+            key={tag}
+            onClick={() => setSelectedTag(tag)}
+            className={`
+                  px-4 p-2 rounded-full transition-all duration-300
+                  ${selectedTag === tag
+                ? "bg-secondary text-primary"
+                : "border border-secondary text-secondary hover:bg-secondary/10"
+              }
+        `}
+          >
+            {tag}
+          </button>
+        ))}
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {filteredProjects.map((project, index) => (
+          <WorksCard
+            key={project.name}
+            index={index}
+            {...project}
           />
         ))}
       </div>
-      {activeProject && (
-        <ProjectModal
-          project={activeProject}
-          onClose={() => setActiveProject(null)}
-        />
-      )}
+      
     </>
   );
 

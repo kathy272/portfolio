@@ -16,10 +16,5 @@ const styles = {
   sectionSubText2:
     "sm:text-[16px] text-[14px] text-secondary uppercase tracking-wider",
 };
-const bgStyle = {
-   backgroundImage: `url(${base}yellowstone.jpg)`,
-  backgroundPosition: "center top",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-};
-export { styles, bgStyle };
+
+export { styles };

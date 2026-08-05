@@ -20,12 +20,12 @@ const Steam = ({ count = 3, position = [0, 0, 0], isMobile = false }) => {
         for (let i = 0; i < count; i++) {
             temp.push({
                 position: new THREE.Vector3(
-                    (Math.random() - 0.2) * (isMobile ? 0.5 : 1.1),
-                    Math.random() * (isMobile ? 0.4 : 1),
-                    (Math.random() - 0.5) * (isMobile ? 0.4 : 1.0)
+                    (Math.random() - 0.03) * (isMobile ? 0.5 : 1.1),
+                    Math.random() * (isMobile ? 0.4 : 1.3),
+                    (Math.random() - 2.5) * (isMobile ? 0.4 : 1.0)
                 ),
                 speed: (isMobile ? 0.0005 : 0.001) + Math.random() * (isMobile ? 0.001 : 0.002),
-                scale: (isMobile ? 0.15 : 0.4) + Math.random() * (isMobile ? 0.001 : 0.1),
+                scale: (isMobile ? 0.25 : 0.7) + Math.random() * (isMobile ? 0.001 : 0.1),
             });
 
         }
@@ -87,7 +87,7 @@ const model = useGLTF(`${base}Main/scene.gltf`);
             >
                 <primitive
                     object={model.scene}
-                    scale={isMobile ? 0.9 : 2}
+                    scale={isMobile ? 0.9 : 3}
                     position={isMobile ? [-2.5, -3.5, -0.5] : [-5.0, -3.2, -6.7]} // position={isMobile ? [-2.5, -1.5,-0.5] : [-2.5,-2.5,-1.5]}
                     rotation={[-0.01, -0.7, -0.1]}
                     castShadow
