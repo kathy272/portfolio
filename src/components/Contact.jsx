@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { styles } from '../styles';
-import emailjs from '@emailjs/browser';
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
@@ -9,6 +8,7 @@ import { slideIn } from "../utils/motion";
 import BubbleCanvas from "./canvas/BubbleCanvas";
 import ModelCanvas from "./canvas/ModelMain";
 import LinkedIn from "/icons/linkedIn.svg"
+import { Link } from "react-router-dom";
 const base = import.meta.env.BASE_URL;
 
 const Contact = () => {
@@ -64,13 +64,10 @@ const Contact = () => {
                         <a href="https://www.linkedin.com/in/katharina-kendlbacher-10a3212b1" className="underline pt-1  w-full ">
                             <img src={LinkedIn} alt="linkedIn" className="w-5 h-auto ms-auto" />
                         </a>
-                            <a href="/impressum" className=" no-underline hover:underline; text-right">
-        Impressum
-    </a>
+                
+    <Link to="/impressum" className=" no-underline hover:underline; text-right">Impressum</Link>
 
-    <a href="/privacy" className="no-underline hover:underline; text-right">
-        Privacy Policy
-    </a>
+  <Link to="/privacy" className=" no-underline hover:underline; text-right">Privacy Policy</Link>
                     </div>
 
                 </div>

@@ -1,17 +1,17 @@
 
 import React from "react";
-import { Navbar, Contact } from "./";
-
+import Navbar from "./Navbar";
+import Contact from "./Contact";
 const Impressum = () => {
     return (
         <div className="min-h-screen bg-primary">
             <Navbar />
 
-            <main className="bg-primary text-secondary px-6 py-24">
+            <main className="bg-primary max-w-[90vw] text-secondary px-20 py-24">
                 <div className="mx-auto">
 
                     <h1 className="text-4xl font-light uppercase mb-12">
-                        Imprint
+                        Impressum
                     </h1>
 
                     <section className="mb-10">

@@ -8,10 +8,8 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from "../hoc";
 const base = import.meta.env.BASE_URL;
-import ModelCanvas from "./canvas/ModelMain";
-import {
-    Experience
-} from './';
+
+
 
 const About = () => {
     return (
