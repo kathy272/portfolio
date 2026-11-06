@@ -3,7 +3,7 @@ import ProjectPage from "./components/ProjectPage";
 //when in development, use basename="/" 
 //when in production, use basename="/portfolio/"
 import {
-  About, Contact, Experience, Hero, Navbar, Works,
+  About, Contact, Experience, Hero, Navbar, Works, Impressum, Privacy
 } from './components';
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -39,6 +39,15 @@ const App = () => {
           path="/about"
           element={<About />}
         />
+        <Route
+    path="/impressum"
+    element={<Impressum />}
+/>
+
+<Route
+    path="/privacy"
+    element={<Privacy />}
+/>
       </Routes>
 
     </BrowserRouter>

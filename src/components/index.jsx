@@ -4,6 +4,8 @@ import About from "./About";
 import Experience from "./Experience";
 import Works from "./Works";
 import Contact from "./Contact";
+import Impressum from "./Impressum";
+import Privacy from "./Privacy";
 
 export {
   Hero,
@@ -12,4 +14,6 @@ export {
   Experience,
   Works,
   Contact,
+  Impressum,
+  Privacy
 };

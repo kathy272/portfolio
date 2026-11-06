@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import ModelCanvas from "./canvas/ModelMain";
-import logo from '../assets/logo_new.svg';
+import logo from '../assets/logo_outline.svg';
 
 const base = import.meta.env.BASE_URL;
 

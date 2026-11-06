@@ -23,11 +23,6 @@ module.exports = {
         "contact": "url('/src/assets/background_01.png')",
         "about": "url('/src/assets/bg_space.png')",
         "small": "url('/src/assets/bg_small.png')",
-        "tideUp": "url('/TideUp/tideUp_background.png')",
-        "rte1": "url('/rte/rte_textbg.png')",
-        "rte2": "url('/rte/rte_textbg2.png')",
-
-
       },
       animation: {
         typewriter: "typewriter 2s steps(11) forwards"

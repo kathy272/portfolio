@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
-import logo from '../assets/logo_new.svg';
+import logo from '../assets/logo_vector.svg';
 import menu from '../assets/menu.svg';
 import close from '../assets/close.svg';
 
@@ -24,8 +24,6 @@ const Navbar = () => {
                     <img src={logo} alt="logo" className="w-12 object-contain" />
 
                 </Link>
-
-
 
                 <ul className="hidden gap-10 sm:flex">
                     <li>
@@ -53,10 +51,10 @@ const Navbar = () => {
                         className="w-[28px] h-[28px] object-contain cursor-pointer"
                         onClick={() => setToggle(!toggle)}
                     />
-                    <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+                    <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-secondary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
                         <ul className="flex list-none flex-col items-start gap-4">
                             <li>
-                                <Link to="/#about" onClick={() => setToggle(false)}>
+                                <Link to="/about" onClick={() => setToggle(false)}>
                                     About
                                 </Link>
                             </li>

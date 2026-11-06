@@ -57,16 +57,8 @@ const About = () => {
                             </div>
                         </motion.div>
                     </div>
-
-
-
-
                 </div>
-
-
-
             </main>
-            <Experience />
             <div className="relative z-0">
                 <Contact />
             </div>

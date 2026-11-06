@@ -44,13 +44,13 @@ const areas = [
 
 const experiences = [
   {
-title: "Designer & Marketing Assistant",
-company_name: "Freelance",
-date: "2025 - Present",
-points: [
-  "Creating a complete brand identity for a podcast, including logo design, social media graphics, and promotional materials.",
-  "Designing and illustrating a book cover and interior illustrations for a book, ensuring that the visual elements align with the narrative and theme of the story, as well as desining an album cover.",
-]
+    title: "Designer & Marketing Assistant",
+    company_name: "Freelance",
+    date: "2025 - Present",
+    points: [
+      "Creating a complete brand identity for a podcast, including logo design, social media graphics, and promotional materials.",
+      "Designing and illustrating a book cover and interior illustrations for a book, ensuring that the visual elements align with the narrative and theme of the story, as well as desining an album cover.",
+    ]
   },
 
   {
@@ -87,108 +87,98 @@ points: [
 
 
 
+
 const projects = [
+  {
+    slug: "kein-ort",
+    name: "Book cover",
+    sub: "Design & Illustration",
+    tags: ["Illustration"],
+    cover: `${base}KeinOrt/cover.webp`,
+  },
+  {
+    slug: "album",
+    name: "Album Cover",
+    sub: "Design & Illustration",
+    tags: ["Illustration"],
+    featured: true,
+    cover: `${base}album/AlbumCover_Mockup.webp`,
+  },
+  {
+    slug: "lumen",
+    name: "Lumen",
+    sub: "Hotel Website Design",
+    tags: ["UI/UX", "Web", "Mobile"],
+    featured: true,
+    cover: `${base}Lumen/laptop_lumen.webp`,
+  },
   {
     slug: "tideup",
     name: "TideUp",
-  
-    sub: "A serious game about recycling",
-    short: "Designing and modelling various 3D Models in Blender for TideUp.",
-
+    sub: "3D Game Assets",
     tags: ["3D"],
-    cover: `${base}TideUp/cover_TideUp.png`,
+    featured: true,
+    cover: `${base}TideUp/cover_TideUp_new.webp`,
   },
   {
     slug: "ar-map",
-    name: "AR Map Creator",
-    
-    sub: " Real Time Map Rendering",
-    short: "In the ACME Lab in CU Boulder, I had the opportunity to create a dynamic AR application.",
-
-    tags: [ "Creative Coding"
-    ],
-    cover: `${base}ARMap/cover_Armap.png`,
-
+    name: "M[A(R)]P",
+    sub: "Real Time AR Map",
+    tags: ["Creative Coding"],
+    cover: `${base}ARMap/cover_Armap.webp`,
   },
   {
     slug: "real-time-engine",
     name: "Real-Time Engine",
-    
-    sub: "Live Visuals",
-    short: "Creating a visual live programming environment for the 69 x 4.5 m display at the House of Digitalization in Tulln.",
-
-
-    tags: [
-    "Creative Coding"
-    ],
-
-    cover: `${base}rte/cover_Rte.png`,
-
+    sub: "Shader Programming",
+    tags: ["Creative Coding"],
+    cover: `${base}rte/cover_Rte.webp`,
   },
   {
     slug: "arcane-mind",
     name: "Arcane Mind",
-   
-    sub: "A Tarot Card Reading App",
-    short: "A Tarot Card Reading App that I created in collaboration with a colleague.",
-
-    tags: [
-    "UI/UX", "Illustration", "Mobile"
-    ],
-    cover: `${base}ArcaneMind/cover_arcaneMind.png`,
+    sub: "Tarot App Design & Programming",
+    tags: ["UI/UX", "Illustration", "Mobile"],
+    cover: `${base}ArcaneMind/cover_arcaneMind.webp`,
   },
   {
     slug: "meet-me",
     name: "MeetMe",
-   
-    sub: "A Meet-Up App in Figma",
-    short: "Design project for an event app for like-minded people.",
-
-    tags: [
-    "UI/UX", "Mobile"
-    ],
-    cover: `${base}MeetMe/cover_MeetMe.png`,
-
+    sub: "Event App Design",
+    tags: ["UI/UX", "Mobile"],
+    featured: true,
+    cover: `${base}MeetMe/iPhone_Mockup.webp`,
   },
   {
     slug: "wunden",
     name: "Wunden (er)zählen",
-   
-    sub: "Cover and Illustrations for a Book",
-    short: "Designing 15+ Illustrations and Cover Art which are closely tied to the narrative.",
-
-    tags: [
-      "Illustration"
-
-    ],
-    cover: `${base}Wunden/cover_Wunden.png`,
+    sub: "Book Cover & Illustrations",
+    tags: ["Illustration"],
+    cover: `${base}Wunden/cover_Wunden.webp`,
   },
   {
     slug: "portfolio-website",
-    name: "Portfolio Website",
-  
-    sub: "Website design and programming",
-    short: "This portfolio website was built with React, ThreeJS and TailwindCSS.",
-
-    tags: [
-      "Web","UI/UX",
-    ],
-    cover: `${base}Portfolio/project7.png`,
+    name: "Portfolio",
+    sub: "Website Design & Programming",
+    tags: ["Web", "UI/UX"],
+    cover: `${base}Portfolio/project7.webp`,
   },
   {
     slug: "chronicles",
-    name: "Chronicles",
-    sub: "A blog website ",
-    short: "Designing and prototyping a blog website.",
-
-    tags: [
-      "UI/UX", "Web"
-
-    ],
-    cover: `${base}Chronicles/landingpage_blog.png`,
+    name: "Calyx",
+    sub: "Blog Website Design & Programming",
+    tags: ["UI/UX", "Web"],
+    cover: `${base}Chronicles/landingpage_mockup.webp`,
   },
-
+  {
+    slug: "charlies",
+    name: "Charlies Island",
+    sub: "2D Game Assets and Illustrations",
+    tags: ["Illustration"],
+    cover: `${base}Charlies/charlies_illustration_2.webp`,
+  }
 ];
+
 
 
 export { areas, experiences, projects };

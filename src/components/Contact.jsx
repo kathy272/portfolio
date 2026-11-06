@@ -14,72 +14,20 @@ const base = import.meta.env.BASE_URL;
 const Contact = () => {
     const isAboutPage = window.location.pathname === "/about";
     const isHomePage = window.location.pathname === "/";
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-    const formRef = useRef();
-    const [loading, setLoading] = useState(false);
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-
-        setForm({
-            ...form,
-            [name]: value,
-        });
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoading(true);
-
-        emailjs
-            .send(
-                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: form.name,
-                    to_name: "Recipient Name",
-                    from_email: form.email,
-                    to_email: "kendlbacherkatharina@gmail.com",
-
-                    message: form.message,
-                },
-                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-
-            )
-            .then(
-                () => {
-                    setLoading(false);
-                    alert("Thank you. I will get back to you as soon as possible.");
-                    setForm({
-                        name: "",
-                        email: "",
-                        message: "",
-                    });
-                },
-                (error) => {
-                    setLoading(false);
-                    console.error(error);
-                    alert("Something went wrong.");
-                }
-            );
-
-    }
     return (
         <div className=" bg-contact">
             <div id="contact"
 
-                className="xl:mt-12 pt-[150px] flex lg:flex-row flex-col-reverse gap-10 ">
+                className="xl:mt-10 pt-[150px] flex lg:flex-row flex-col-reverse gap-10 ">
 
                 <motion.div
                     variants={slideIn("left", "tween", 0.2, 1)}
-                    className="flex-1 sm:pl-16 px-6 w-full lg:w-2/5 xl:w-1/2 sm:py-10 py-15"
+                    className="flex-1 sm:pl-16 px-6 w-full lg:w-2/5 xl:w-1/2 pt-10 "
                 >
-                    {isHomePage && (
+                    {!isHomePage && (
                         <img
                             src={`${base}illustration_me.png`}
-                            className="absolute w-[220px] sm:w-[300px] lg:w-[400px] 2xl:w-[500px] h-auto mt-[-150px] sm:mt-[-200px] lg:mt-[410px] xl:mt-[320px] z-10 sm:end-5 end-[0px] lg:end-[240px] 2xl:end-[280px]"
+                            className="absolute w-[220px] sm:w-[400px] lg:w-[400px] 2xl:w-[500px] h-auto mt-[-150px] sm:mt-[-400px] lg:mt-[110px] xl:mt-[50px] z-10 sm:end-5 end-[0px] lg:end-[350px] 2xl:end-[280px]"
                             alt="Drawing of me"
                         />
                     )}
@@ -87,60 +35,24 @@ const Contact = () => {
 
                     <h2 className=" text-teritary font-light uppercase md:text-[70px] pt-10 sm:text-[60px] xs:text-[50px] leading-tight text-[30px]">Let's <span className="text-[#69B8E4]">Talk!</span></h2>
 
-                    <form
-                        ref={formRef}
-                        onSubmit={handleSubmit}
-                        className="mt-12 flex flex-col gap-8">
-
-                        <label className="flex flex-col">
-                            <span className="text-white font-medium mb-4">Your Name</span>
-                            <input
-                                type="text"
-                                name="name"
-                                value={form.name}
-                                onChange={handleChange}
-                                placeholder="What's your name?"
-                                className="bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
-                            />
-                        </label>
-                        <label className="flex flex-col">
-                            <span className="text-white font-medium mb-4">Your Email</span>
-                            <input
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="What's your email?"
-                                className="bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
-                            />
-                        </label>
-                        <label className="flex flex-col">
-                            <span className="text-white font-medium mb-4">Your Message</span>
-                            <textarea
-                                rows={7}
-                                name="message"
-                                value={form.message}
-                                onChange={handleChange}
-                                placeholder="What do you want to say?"
-                                className="bg-tertiary py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
-                            />
-                        </label>
-
-                        <button
-                            type="submit"
-                            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow
-                                        hover:bg-secondary transition-colors duration-300 rounded-xl"
-                            disabled={loading}
-                        >
-                            {loading ? "Sending..." : "Send"}
-                        </button>
-                    </form>
+                   <p className="text-teritary text-[17px] py-5 pb-10 leading-[30px] text-left">
+                        If you have any questions, want to collaborate on a project, or just want to say hi, feel free to reach out! I'm always open to new opportunities and connections!
+                    </p>
+                   
+<a
+    href="mailto:kendlbacherkatharina@gmail.com?subject=Portfolio%20Inquiry"
+    className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md
+               hover:bg-secondary transition-colors duration-300 rounded-xl inline-block"
+>
+    Send me an email
+</a>
+                  
                 </motion.div>
                 <motion.div
                     variants={slideIn("right", "tween", 0.2, 1
                     )}
-                    className="md.flex-1  w-full h-[500px] sm:h-[700px] lg:w-1/2 lg:h-[600px] xl:w-2/5 xl:h-[800px] xl:mt-[-150px] xl:pt-[400px] xl:pt-[200px] 2xl:h-[1000px] xl:h-[650px] 2xl:w-1/2 pt-[150px]">
-                    {!isHomePage ? <ModelCanvas /> : <BubbleCanvas />}
+                    className="md.flex-1  w-full h-[500px] sm:h-[700px] lg:w-1/2 lg:h-[600px] xl:w-2/5 xl:h-[800px] xl:mt-[-300px] xl:pt-[400px] xl:pt-[200px] 2xl:h-[1000px] xl:h-[650px] 2xl:w-1/2 pt-[150px]">
+                    {isHomePage ? <ModelCanvas /> : <BubbleCanvas />}
                 </motion.div>
             </div>
             <div className="flex flex-col">
@@ -152,6 +64,13 @@ const Contact = () => {
                         <a href="https://www.linkedin.com/in/katharina-kendlbacher-10a3212b1" className="underline pt-1  w-full ">
                             <img src={LinkedIn} alt="linkedIn" className="w-5 h-auto ms-auto" />
                         </a>
+                            <a href="/impressum" className=" no-underline hover:underline; text-right">
+        Impressum
+    </a>
+
+    <a href="/privacy" className="no-underline hover:underline; text-right">
+        Privacy Policy
+    </a>
                     </div>
 
                 </div>
